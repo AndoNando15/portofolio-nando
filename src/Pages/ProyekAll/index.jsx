@@ -43,7 +43,7 @@ const ProyekAll = () => {
                 <h3 className="text-xl font-semibold text-left mb-2">Algoritma Genetika - Penjadwalan Website</h3>
 
                 {/* Ikon Next di Kanan Bawah (Bulat) */}
-                <a href="/subproyek1" className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200">
+                <a onClick={() => navigate('/subproyek1')} className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200">
                   <FaArrowRight className="text-2xl" />
                 </a>
               </div>
@@ -60,7 +60,7 @@ const ProyekAll = () => {
                 <h3 className="text-xl font-semibold text-left mb-2">Peminjaman Ruangan Website</h3>
 
                 {/* Ikon Next di Kanan Bawah (Bulat) */}
-                <a href="/subproyek2" className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200">
+                <a onClick={() => navigate('/subproyek2')} className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200">
                   <FaArrowRight className="text-2xl" />
                 </a>
               </div>
