@@ -24,16 +24,16 @@ const Header = () => {
           <a href="/" className="hover:underline">
             Halaman Utama
           </a>
-          <a href="kemampuan" className="hover:underline">
+          <a href="/kemampuan" className="hover:underline">
             Kemampuan
           </a>
           <a href="/" className="hover:underline">
             Tentang Saya
           </a>
-          <a href="proyek" className="hover:underline">
+          <a href="/proyek" className="hover:underline">
             Proyek
           </a>
-          <a href="sertifikat" className="hover:underline">
+          <a href="/sertifikat" className="hover:underline">
             Sertifikat
           </a>
         </nav>

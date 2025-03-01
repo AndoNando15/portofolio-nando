@@ -36,7 +36,7 @@ const Sertifikat = () => {
               <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">22 Desember 2023</span>
             </div>
             <p className="text-sm text-gray-600 mb-4 text-justify">Proud to share that I won 3rd place in the "Lomba Code Championship" during the Musyawarah Wilayah ke-V Permikomnas wilayah IX Jawa Timur on December 22, 2023!</p>
-            <a href="subsertifikat1" className="text-blue-600 hover:underline flex items-center cursor-pointer">
+            <a href="/subsertifikat1" className="text-blue-600 hover:underline flex items-center cursor-pointer">
               Selengkapnya <FaArrowRight className="ml-2" />
             </a>
           </div>
@@ -52,7 +52,7 @@ const Sertifikat = () => {
             </div>
 
             <p className="text-sm text-gray-600 mb-4 text-justify">I’m proud to receive the Internship Certificate from Yayasan Transformasi Bhakti Negeri (TBN Indonesia) for the period of April 29th - June 29th, 2024.</p>
-            <a href="subsertifikat2" className="text-blue-600 hover:underline flex items-center">
+            <a href="/subsertifikat2" className="text-blue-600 hover:underline flex items-center">
               Selengkapnya <FaArrowRight className="ml-2" />
             </a>
           </div>
@@ -71,7 +71,7 @@ const Sertifikat = () => {
             <p className="text-sm text-gray-600 mb-4 text-justify">
               I’m thrilled to have completed the exam and received a certificate for finishing the VOCABULARY 1 course at Peace English Academy with a "B" grade (Very Good) on January 25th, 2022!
             </p>
-            <a href="subsertifikat3" className="text-blue-600 hover:underline flex items-center">
+            <a href="/subsertifikat3" className="text-blue-600 hover:underline flex items-center">
               Selengkapnya <FaArrowRight className="ml-2" />
             </a>
           </div>
