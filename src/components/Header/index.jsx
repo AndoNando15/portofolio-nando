@@ -24,16 +24,16 @@ const Header = () => {
           <a href="/" className="hover:underline">
             Halaman Utama
           </a>
-          <a onClick={() => navigate('/kemampuan')} className="hover:underline">
+          <a onClick={() => navigate('/kemampuan')} className="hover:underline cursor-pointer">
             Kemampuan
           </a>
           <a href="/" className="hover:underline">
             Tentang Saya
           </a>
-          <a onClick={() => navigate('/proyek')} className="hover:underline">
+          <a onClick={() => navigate('/proyek')} className="hover:underline cursor-pointer">
             Proyek
           </a>
-          <a onClick={() => navigate('/sertifikat')} className="hover:underline">
+          <a onClick={() => navigate('/sertifikat')} className="hover:underline cursor-pointer">
             Sertifikat
           </a>
         </nav>
