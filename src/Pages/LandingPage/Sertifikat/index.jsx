@@ -52,7 +52,7 @@ const Sertifikat = () => {
             </div>
 
             <p className="text-sm text-gray-600 mb-4 text-justify">I’m proud to receive the Internship Certificate from Yayasan Transformasi Bhakti Negeri (TBN Indonesia) for the period of April 29th - June 29th, 2024.</p>
-            <a onClick={() => navigate('/subsertifikat2')} className="text-blue-600 hover:underline flex items-center">
+            <a onClick={() => navigate('/subsertifikat2')} className="text-blue-600 cursor-pointer hover:underline flex items-center">
               Selengkapnya <FaArrowRight className="ml-2" />
             </a>
           </div>
@@ -71,7 +71,7 @@ const Sertifikat = () => {
             <p className="text-sm text-gray-600 mb-4 text-justify">
               I’m thrilled to have completed the exam and received a certificate for finishing the VOCABULARY 1 course at Peace English Academy with a "B" grade (Very Good) on January 25th, 2022!
             </p>
-            <a onClick={() => navigate('/subsertifikat3')} className="text-blue-600 hover:underline flex items-center">
+            <a onClick={() => navigate('/subsertifikat3')} className="text-blue-600 cursor-pointer hover:underline flex items-center">
               Selengkapnya <FaArrowRight className="ml-2" />
             </a>
           </div>

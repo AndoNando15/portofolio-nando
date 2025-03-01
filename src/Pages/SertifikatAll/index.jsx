@@ -39,7 +39,7 @@ const SertifikatAll = () => {
                 <h3 className="text-xl font-semibold text-left mb-2">CODE CHAMPIONSHIP : Musywil Jawa Timur 2023</h3>
                 <div className="text-sm text-gray-600 mb-2">Juara 3 - 22 Desember 2023</div>
                 <p className="text-sm text-gray-600 mb-4">Proud to share that I won 3rd place in the "Lomba Code Championship" during the Musyawarah Wilayah ke-V Permikomnas wilayah IX Jawa Timur on December 22, 2023!</p>
-                <a onClick={() => navigate('/subsertifikat1')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
+                <a onClick={() => navigate('/subsertifikat1')} className="text-blue-600 cursor-pointer hover:underline flex items-center cursor-pointer">
                   Selengkapnya <FaArrowRight className="ml-2" />
                 </a>
               </div>
@@ -50,7 +50,7 @@ const SertifikatAll = () => {
                 <h3 className="text-xl font-semibold text-left mb-2">Yayasan Transformasi Bhakti Negeri (TBN INDONESIA)</h3>
                 <div className="text-sm text-gray-600 mb-2">Revamp Website - IMM - April - July 2024</div>
                 <p className="text-sm text-gray-600 mb-4">I’m proud to receive the Internship Certificate from Yayasan Transformasi Bhakti Negeri (TBN Indonesia) for the period of April 29th - June 29th, 2024.</p>
-                <a onClick={() => navigate('/subsertifikat2')} className="text-blue-600 hover:underline flex items-center">
+                <a onClick={() => navigate('/subsertifikat2')} className="text-blue-600 cursor-pointer hover:underline flex items-center">
                   Selengkapnya <FaArrowRight className="ml-2" />
                 </a>
               </div>
@@ -65,7 +65,7 @@ const SertifikatAll = () => {
                 <p className="text-sm text-gray-600 mb-4">
                   I’m thrilled to have completed the exam and received a certificate for finishing the VOCABULARY 1 course at Peace English Academy with a "B" grade (Very Good) on January 25th, 2022!{' '}
                 </p>
-                <a onClick={() => navigate('/subsertifikat3')} className="text-blue-600 hover:underline flex items-center">
+                <a onClick={() => navigate('/subsertifikat3')} className="text-blue-600 hover:underline cursor-pointer flex items-center">
                   Selengkapnya <FaArrowRight className="ml-2" />
                 </a>
               </div>
