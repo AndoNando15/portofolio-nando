@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowRight, FaPhoneAlt, FaEnvelope, FaTwitter } from 'react-icons/fa';
+import { FaArrowRight, FaPhoneAlt, FaEnvelope, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const KontakKami = () => {
   return (
@@ -20,7 +20,10 @@ const KontakKami = () => {
               <div className="bg-[#4682B4] text-white w-12 h-12 rounded-full flex items-center justify-center font-semibold text-lg mr-4">n</div>
               <div className="text-lg font-semibold text-[#4682B4]">Nando Innovatech</div>
             </div>
-            <div className="text-sm text-gray-600 mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
+            <div className="text-sm text-gray-600 mb-4 text-justify">
+              Lulusan S1 Teknik Informatika UM Gresik dengan keahlian di pengembangan perangkat lunak, analisis data, dan manajemen proyek. Berpengalaman merancang perangkat lunak yang berkualitas dan fungsional, serta berkomitmen
+              berkembang di bidang software engineering.
+            </div>
 
             {/* Halaman Links */}
             <div className="mb-4">
@@ -45,7 +48,7 @@ const KontakKami = () => {
                   <FaEnvelope className="mr-2 text-[#4682B4]" /> andonando158@gmail.com
                 </li>
                 <li className="flex items-center text-gray-700">
-                  <FaTwitter className="mr-2 text-[#4682B4]" /> @andonando_15
+                  <FaInstagram className="mr-2 text-[#4682B4]" /> @andonando_15
                 </li>
               </ul>
             </div>

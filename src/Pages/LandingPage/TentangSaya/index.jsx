@@ -23,7 +23,7 @@ const TentangSaya = () => {
           <a
             href={downloadCV} // Ganti dengan lokasi file Anda
             download="CV_Herlando Prayitno.pdf" // Nama file yang akan diunduh
-            className="inline-block bg-[#85C8FF] text-black py-2 px-15 rounded-full hover:bg-[#6aa6d7] transition duration-200"
+            className="inline-block bg-[#85C8FF] text-black py-3 px-8 rounded-full hover:bg-[#6aa6d7] hover:text-white transition duration-300 ease-in-out transform hover:scale-105"
           >
             Unduh CV
           </a>

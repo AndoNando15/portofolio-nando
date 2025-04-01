@@ -11,18 +11,19 @@ const SubProyek1 = () => {
 
   // Daftar keterangan untuk card
   const cardDescriptions = [
-    { title: 'HALAMAN LOGIN', image: '/images/Proyek/peminjaman-ruangan/001-halaman-login.png' },
-    { title: 'HALAMAN PENDAFTAR BARU', image: '/images/Proyek/peminjaman-ruangan/002-halaman-pendaftar-baru.png' },
-    { title: 'HALAMAN DATA PETUGAS', image: '/images/Proyek/peminjaman-ruangan/003-halaman-data-petugas.png' },
-    { title: 'HALAMAN DATA PENGGUNA', image: '/images/Proyek/peminjaman-ruangan/004-halaman-data-pengguna.png' },
-    { title: 'HALAMAN PERMINTAAN PINJAM', image: '/images/Proyek/peminjaman-ruangan/005-halaman-permintaan-pinjam.png' },
-    { title: 'HALAMAN DATA ALAT', image: '/images/Proyek/peminjaman-ruangan/006-halaman-data-alat.png' },
-    { title: 'HALAMAN RUANGAN', image: '/images/Proyek/peminjaman-ruangan/007-halaman-ruangan.png' },
-    { title: 'HALAMAN DATA PEMINJAMAN', image: '/images/Proyek/peminjaman-ruangan/008-halaman-data-peminjaman.png' },
-    { title: 'HALAMAN HISTORI PEMINJAMAN', image: '/images/Proyek/peminjaman-ruangan/009-halaman-histori-peminjaman.png' },
-    { title: 'HALAMAN USER', image: '/images/Proyek/peminjaman-ruangan/010-halaman-user.png' },
-    { title: 'HALAMAN USER 2', image: '/images/Proyek/peminjaman-ruangan/011-halaman-user-2.png' },
+    { title: 'Halaman 1', image: '/images/Proyek/game-ar-haji/001-halaman-1.png' },
+    { title: 'Halaman 2', image: '/images/Proyek/game-ar-haji/002-halaman-2.png' },
+    { title: 'Halaman 3', image: '/images/Proyek/game-ar-haji/003-halaman-3.png' },
+    { title: 'Halaman 4', image: '/images/Proyek/game-ar-haji/004-halaman-4.png' },
+    { title: 'Halaman 5', image: '/images/Proyek/game-ar-haji/005-halaman-5.png' },
+    { title: 'Halaman 6', image: '/images/Proyek/game-ar-haji/006-halaman-6.png' },
+    { title: 'Halaman 7', image: '/images/Proyek/game-ar-haji/007-halaman-7.png' },
+    { title: 'Halaman 8', image: '/images/Proyek/game-ar-haji/008-halaman-8.png' },
+    { title: 'Halaman 9', image: '/images/Proyek/game-ar-haji/009-halaman-9.png' },
+    { title: 'Halaman 10', image: '/images/Proyek/game-ar-haji/010-halaman-10.png' },
+    { title: 'Halaman 11', image: '/images/Proyek/game-ar-haji/011-halaman-11.png' },
   ];
+
   const openModal = (image) => {
     setModalImage(image); // Open modal with the selected image
   };
@@ -54,12 +55,12 @@ const SubProyek1 = () => {
 
           {/* Judul Proyek */}
           <div className="text-center mb-6">
-            <h2 className="text-3xl font-semibold text-[#4682B4] mb-2">Peminjaman Ruangan Website</h2>
+            <h2 className="text-3xl font-semibold text-[#4682B4] mb-2">AR - Game Haji Virtual</h2>
             <div className="flex justify-center gap-4 mb-6">
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">UI/UX Design</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">PHP</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Laravel</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">BOOSTRAB 5</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Unity</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">3D</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">C#</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Blender</span>
             </div>
           </div>
 

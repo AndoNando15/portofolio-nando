@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaPlay } from 'react-icons/fa'; // Ikon play dari react-icons
-import bannerImage1 from '/images/Konten/1-FOTO-BANNER-1.svg';
+import bannerImage1 from '/images/Konten/3-foto-banner.png';
 
 const HalamanUtama = () => {
   return (
@@ -8,7 +8,7 @@ const HalamanUtama = () => {
       <div className="flex items-center justify-center  px-4 md:px-20 py-0 md:py-10 bg-[#F0F8FF]">
         <div className="flex flex-col md:flex-row w-full max-w-6xl bg-[#F0F8FF] rounded-lg overflow-hidden">
           {/* Bagian Kiri */}
-          <div className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start text-center md:text-left p-4 mt-6 md:mt-16">
+          <div className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start text-center md:text-left p-4 mt-6 md:mt-20">
             <h5 className="text-xs md:text-sm font-semibold bg-gray-200 px-2 py-1 rounded-md w-max">Hallo Semuanya</h5>
 
             <h1 className="text-lg md:text-5xl font-semibold mt-3 leading-snug max-w-xs md:max-w-xl">
@@ -37,17 +37,10 @@ const HalamanUtama = () => {
 
           {/* Bagian Kanan */}
           <div className="w-full md:w-1/2 flex items-center justify-center relative">
-            <img src={bannerImage1} alt="Profile" className="w-70 md:w-130 h-auto" />
+            <img src={bannerImage1} alt="Profile" className="w-90 md:w-150 h-auto" />
           </div>
         </div>
       </div>{' '}
-      <div className="relative">
-        {/* First div */}
-        <div className="bg-[#F0F8FF] h-13 border-2 border-[#4682B4]"></div>
-
-        {/* Second div rotated by -1 degree and aligned below the first div */}
-        <div className="absolute top-[100%] left-0 bg-[#4682B4] h-13 border-2 border-[#4682B4] transform rotate-[-1deg] origin-bottom-left"></div>
-      </div>
     </section>
   );
 };

@@ -11,18 +11,20 @@ const SubProyek1 = () => {
 
   // Daftar keterangan untuk card
   const cardDescriptions = [
-    { title: 'HALAMAN LOGIN', image: '/images/Proyek/peminjaman-ruangan/001-halaman-login.png' },
-    { title: 'HALAMAN PENDAFTAR BARU', image: '/images/Proyek/peminjaman-ruangan/002-halaman-pendaftar-baru.png' },
-    { title: 'HALAMAN DATA PETUGAS', image: '/images/Proyek/peminjaman-ruangan/003-halaman-data-petugas.png' },
-    { title: 'HALAMAN DATA PENGGUNA', image: '/images/Proyek/peminjaman-ruangan/004-halaman-data-pengguna.png' },
-    { title: 'HALAMAN PERMINTAAN PINJAM', image: '/images/Proyek/peminjaman-ruangan/005-halaman-permintaan-pinjam.png' },
-    { title: 'HALAMAN DATA ALAT', image: '/images/Proyek/peminjaman-ruangan/006-halaman-data-alat.png' },
-    { title: 'HALAMAN RUANGAN', image: '/images/Proyek/peminjaman-ruangan/007-halaman-ruangan.png' },
-    { title: 'HALAMAN DATA PEMINJAMAN', image: '/images/Proyek/peminjaman-ruangan/008-halaman-data-peminjaman.png' },
-    { title: 'HALAMAN HISTORI PEMINJAMAN', image: '/images/Proyek/peminjaman-ruangan/009-halaman-histori-peminjaman.png' },
-    { title: 'HALAMAN USER', image: '/images/Proyek/peminjaman-ruangan/010-halaman-user.png' },
-    { title: 'HALAMAN USER 2', image: '/images/Proyek/peminjaman-ruangan/011-halaman-user-2.png' },
+    { title: 'Halaman Loading', image: '/images/Proyek/game-edukasi/001-halaman-loading.png' },
+    { title: 'Halaman Menu Awal', image: '/images/Proyek/game-edukasi/002-halaman-menu-awal.png' },
+    { title: 'Halaman In-Game', image: '/images/Proyek/game-edukasi/003-halaman-ingame.png' },
+    { title: 'Halaman Pilihan Terakhir', image: '/images/Proyek/game-edukasi/004-halaman-pilihan-terakhir.png' },
+    { title: 'Halaman Kunci Level 10', image: '/images/Proyek/game-edukasi/005-halaman-kunci-level-10.png' },
+    { title: 'Halaman Iklan Open Key 10', image: '/images/Proyek/game-edukasi/006-halaman-iklan-open-key-10.png' },
+    { title: 'Halaman Full', image: '/images/Proyek/game-edukasi/007-halaman-full.png' },
+    { title: 'Halaman Tamat', image: '/images/Proyek/game-edukasi/008-halaman-tamat.png' },
+    { title: 'Halaman Open Level', image: '/images/Proyek/game-edukasi/009-halaman-open-level.png' },
+    { title: 'Halaman Level 2', image: '/images/Proyek/game-edukasi/010-halaman-level-2.png' },
+    { title: 'Halaman Ingame 2', image: '/images/Proyek/game-edukasi/011-halaman-ingame-2.png' },
+    { title: 'Halaman Ingame 2-2', image: '/images/Proyek/game-edukasi/012-halaman-ingame2-2.png' },
   ];
+
   const openModal = (image) => {
     setModalImage(image); // Open modal with the selected image
   };
@@ -54,12 +56,13 @@ const SubProyek1 = () => {
 
           {/* Judul Proyek */}
           <div className="text-center mb-6">
-            <h2 className="text-3xl font-semibold text-[#4682B4] mb-2">Peminjaman Ruangan Website</h2>
+            <h2 className="text-3xl font-semibold text-[#4682B4] mb-2">PUZZLE - Game Edukasi Mencocokan Posisi Gambar</h2>
             <div className="flex justify-center gap-4 mb-6">
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">UI/UX Design</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">PHP</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Laravel</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">BOOSTRAB 5</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Unity</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">C#</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">2D</span>
+
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">UI/UX</span>
             </div>
           </div>
 

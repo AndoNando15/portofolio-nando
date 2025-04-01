@@ -11,18 +11,11 @@ const SubProyek1 = () => {
 
   // Daftar keterangan untuk card
   const cardDescriptions = [
-    { title: 'HALAMAN LOGIN', image: '/images/Proyek/peminjaman-ruangan/001-halaman-login.png' },
-    { title: 'HALAMAN PENDAFTAR BARU', image: '/images/Proyek/peminjaman-ruangan/002-halaman-pendaftar-baru.png' },
-    { title: 'HALAMAN DATA PETUGAS', image: '/images/Proyek/peminjaman-ruangan/003-halaman-data-petugas.png' },
-    { title: 'HALAMAN DATA PENGGUNA', image: '/images/Proyek/peminjaman-ruangan/004-halaman-data-pengguna.png' },
-    { title: 'HALAMAN PERMINTAAN PINJAM', image: '/images/Proyek/peminjaman-ruangan/005-halaman-permintaan-pinjam.png' },
-    { title: 'HALAMAN DATA ALAT', image: '/images/Proyek/peminjaman-ruangan/006-halaman-data-alat.png' },
-    { title: 'HALAMAN RUANGAN', image: '/images/Proyek/peminjaman-ruangan/007-halaman-ruangan.png' },
-    { title: 'HALAMAN DATA PEMINJAMAN', image: '/images/Proyek/peminjaman-ruangan/008-halaman-data-peminjaman.png' },
-    { title: 'HALAMAN HISTORI PEMINJAMAN', image: '/images/Proyek/peminjaman-ruangan/009-halaman-histori-peminjaman.png' },
-    { title: 'HALAMAN USER', image: '/images/Proyek/peminjaman-ruangan/010-halaman-user.png' },
-    { title: 'HALAMAN USER 2', image: '/images/Proyek/peminjaman-ruangan/011-halaman-user-2.png' },
+    { title: 'Halaman Upload File', image: '/images/Proyek/deteksi-warna/001-halaman-upload-file.png' },
+    { title: 'Halaman Pilih File', image: '/images/Proyek/deteksi-warna/002-halaman-pilih-file.png' },
+    { title: 'Halaman Dokumentasi', image: '/images/Proyek/deteksi-warna/003-halaman-dokumentasi.png' },
   ];
+
   const openModal = (image) => {
     setModalImage(image); // Open modal with the selected image
   };
@@ -54,12 +47,13 @@ const SubProyek1 = () => {
 
           {/* Judul Proyek */}
           <div className="text-center mb-6">
-            <h2 className="text-3xl font-semibold text-[#4682B4] mb-2">Peminjaman Ruangan Website</h2>
+            <h2 className="text-3xl font-semibold text-[#4682B4] mb-2">KLASIFIKASI - Aplikasi Deteksi Harga Melalui Dokument</h2>
             <div className="flex justify-center gap-4 mb-6">
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">UI/UX Design</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">PHP</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Laravel</span>
-              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">BOOSTRAB 5</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Matlab</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">K-Means</span>
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Klasifikasi</span>
+
+              <span className="bg-[#356699] text-white text-xs px-4 py-2 rounded-full">Harga</span>
             </div>
           </div>
 

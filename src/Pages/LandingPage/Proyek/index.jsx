@@ -45,7 +45,7 @@ const Proyek = () => {
 
           {/* Card 2 */}
           <div className="relative bg-white p-6 rounded-lg shadow-lg">
-            <img src="/images/Proyek/peminjaman-ruangan/data-ruangan.png" alt="Proyek 2" className="w-full h-36 object-cover rounded-lg mb-4" />
+            <img src="/images/Proyek/peminjaman-ruangan/001-halaman-login.png" alt="Proyek 2" className="w-full h-36 object-cover rounded-lg mb-4" />
             {/* Tag Teknologi */}
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">UI/UX Design</span>
@@ -62,7 +62,7 @@ const Proyek = () => {
 
           {/* Card 3 */}
           <div className="relative bg-white p-6 rounded-lg shadow-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Proyek 3" className="w-full h-36 object-cover rounded-lg mb-4" />
+            <img src="images/Proyek/spk-pemilihan-partai/001-halaman-partai.png" alt="Proyek 3" className="w-full h-36 object-cover rounded-lg mb-4" />
             {/* Tag Teknologi */}
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">UI/UX Design</span>
@@ -73,7 +73,7 @@ const Proyek = () => {
             <h3 className="text-xl font-semibold text-left mb-2">SPK - Pemilihan Partai Website</h3>
 
             {/* Ikon Next di Kanan Bawah (Bulat) */}
-            <a href="#" className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200">
+            <a href="/subproyek3" className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200">
               <FaArrowRight className="text-2xl" />
             </a>
           </div>
