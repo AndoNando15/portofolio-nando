@@ -73,7 +73,7 @@ const Proyek = () => {
             <h3 className="text-xl font-semibold text-left mb-2">SPK - Pemilihan Partai Website</h3>
 
             {/* Ikon Next di Kanan Bawah (Bulat) */}
-            <a href="/subproyek3" className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200">
+            <a onClick={() => navigate('/subproyek3')} className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200">
               <FaArrowRight className="text-2xl" />
             </a>
           </div>
