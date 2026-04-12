@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 md:px-45 left-0 w-full bg-[#F0F8FF] z-50">
-      <div className="container mx-auto flex justify-between items-center shadow-sm bg-[#4682B4] text-white p-2 rounded-lg mt-5">
+      <div className="mx-3 md:mx-auto flex justify-between items-center shadow-sm bg-[#4682B4] text-white p-2 rounded-lg mt-5">
         {/* Logo dan Nama */}
         <div className="flex items-center gap-2">
           <h5 className="text-lg font-semibold">Nando Innovatech</h5>

@@ -11,16 +11,16 @@ const HalamanUtama = () => {
           <div className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start text-center md:text-left p-4 mt-6 md:mt-20">
             <h5 className="text-xs md:text-sm font-semibold bg-gray-200 px-2 py-1 rounded-md w-max">Hallo Semuanya</h5>
 
-            <h1 className="text-lg md:text-5xl font-semibold mt-3 leading-snug max-w-xs md:max-w-xl">
+            <h1 className="text-3xl md:text-5xl font-semibold mt-3 leading-tight max-w-sm md:max-w-2xl">
               Saya <span className="text-[#4682B4] font-bold">Herlando Prayitno</span> <br />
               Software Engineering <br />
               Asal <span className="text-[#4682B4] font-bold">Gresik.</span>
             </h1>
 
-            <p className="text-gray-600 mt-3 max-w-xs md:max-w-lg text-sm md:text-base">Saya Fresh Graduate Teknik Informatika Universitas Muhammadiyah Gresik tahun 2025</p>
+            {/* <p className="text-gray-600 mt-3 max-w-xs md:max-w-lg text-sm md:text-base">Saya Fresh Graduate Teknik Informatika Universitas Muhammadiyah Gresik tahun 2025</p> */}
 
             {/* Tombol */}
-            <div className="flex flex-wrap md:flex-nowrap gap-1 md:gap-4 mt-3 justify-center md:justify-start w-auto">
+            {/* <div className="flex flex-wrap md:flex-nowrap gap-1 md:gap-4 mt-3 justify-center md:justify-start w-auto">
               <button className="flex items-center justify-center bg-[#4682B4] text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[9px] md:text-sm font-medium shadow-md hover:bg-[#356699] transition min-w-max cursor-pointer">
                 Lihat Portofolio Saya
                 <FaPlay className="ml-2 text-[7px] md:text-sm" />
@@ -32,7 +32,7 @@ const HalamanUtama = () => {
               >
                 Rekrut Saya
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Bagian Kanan */}

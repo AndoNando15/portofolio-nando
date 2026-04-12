@@ -68,7 +68,7 @@ const Proyek = () => {
               <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">UI/UX Design</span>
               <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">PHP</span>
               <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">Laravel</span>
-              <span className="text-xs bg-blue-100 text-blue-600 py-1 px-3 rounded-full">SPK</span>
+              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">SPK</span>
             </div>
             <h3 className="text-xl font-semibold text-left mb-2">SPK - Pemilihan Partai Website</h3>
 
