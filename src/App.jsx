@@ -21,7 +21,8 @@ import SubSertifikat5 from './Pages/SertifikatAll/SubSertifikat5';
 import SubSertifikat6 from './Pages/SertifikatAll/SubSertifikat6';
 import SubSertifikat7 from './Pages/SertifikatAll/SubSertifikat7';
 import SubSertifikat8 from './Pages/SertifikatAll/SubSertifikat8';
-
+import SubProyek11 from './Pages/ProyekAll/SubProyek11';
+import SubProyek12 from './Pages/ProyekAll/SubProyek12';
 const App = () => {
   return (
     <Routes>
@@ -39,6 +40,8 @@ const App = () => {
       <Route path="/subproyek8" element={<SubProyek8 />} />
       <Route path="/subproyek9" element={<SubProyek9 />} />
       <Route path="/subproyek10" element={<SubProyek10 />} />
+      <Route path="/subproyek11" element={<SubProyek11 />} />
+      <Route path="/subproyek12" element={<SubProyek12 />} />
 
       {/* Bagian Sertifikat */}
       <Route path="/sertifikat" element={<SertifikatAll />} />

@@ -67,6 +67,18 @@ const ProyekAll = () => {
       subProyek: '/subproyek10',
       tags: ['Web App', 'Dashboard', 'Makan', 'Minum'],
     },
+    {
+      title: 'Sistem Pembayaran SPP',
+      image: '/images/Proyek/spp/halaman-login.png',
+      subProyek: '/subproyek11',
+      tags: ['Web App', 'Admin', 'Guru', 'Pembayaran'],
+    },
+    {
+      title: 'Hybrid Monte Carlo',
+      image: '/images/Proyek/hybrid-montecarlo/halaman-dashboard.png',
+      subProyek: '/subproyek12',
+      tags: ['Web App', 'Monte Carlo', 'Smothing', 'Analisis'],
+    },
   ];
 
   return (
