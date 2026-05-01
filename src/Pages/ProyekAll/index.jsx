@@ -1,29 +1,34 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaChevronLeft } from 'react-icons/fa';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../data/translations';
 
 const ProyekAll = () => {
   const navigate = useNavigate();
+  const { language } = useLanguage();
+  const t = translations[language].projects;
 
   const cardDescriptions = [
     {
       title: 'Algoritma Genetika - Penjadwalan Website',
       image: '/images/Proyek/algoritma-genetika/HALAMAN-LOGIN.png',
       subProyek: '/subproyek1',
-      tags: ['UI/UX Design', 'PHP', 'Laravel', 'Algoritma Genetika'],
+      tags: ['UI/UX Design', 'PHP', 'Laravel', 'GA'],
     },
     {
       title: 'Peminjaman Ruangan Website',
       image: '/images/Proyek/peminjaman-ruangan/001-halaman-login.png',
       subProyek: '/subproyek2',
-      tags: ['UI/UX Design', 'PHP', 'Laravel', 'Website'],
+      tags: ['UI/UX Design', 'PHP', 'Laravel', 'Web'],
     },
     {
       title: 'SPK - Pemilihan Partai Website',
       image: '/images/Proyek/spk-pemilihan-partai/001-halaman-partai.png',
       subProyek: '/subproyek3',
-      tags: ['SPK', 'PHP', 'Laravel', 'Website'],
+      tags: ['SPK', 'PHP', 'Laravel', 'Web'],
     },
     {
       title: 'UNITY - Aplikasi Quiz Psikologi',
@@ -35,25 +40,25 @@ const ProyekAll = () => {
       title: 'UAS - Aplikasi Uji Kompetensi Keahlian TPTU',
       image: '/images/Proyek/aplikasi-smk-tptu/002-halaman-utama.png',
       subProyek: '/subproyek5',
-      tags: ['Desktop App', 'UI/UX', 'Pendidikan', 'TPTU'],
+      tags: ['Desktop', 'UI/UX', 'Education', 'TPTU'],
     },
     {
       title: 'KLASIFIKASI - Aplikasi Deteksi Harga Melalui Dokument',
       image: '/images/Proyek/deteksi-warna/003-halaman-dokumentasi.png',
       subProyek: '/subproyek6',
-      tags: ['Klasifikasi', 'Dokumentasi', 'Deteksi', 'Aplikasi'],
+      tags: ['Classification', 'Docs', 'Detection', 'App'],
     },
     {
       title: 'AR - Game Haji Virtual',
       image: '/images/Proyek/game-ar-haji/001-halaman-1.png',
       subProyek: '/subproyek7',
-      tags: ['AR', 'Unity', 'Game', 'Edukasi'],
+      tags: ['AR', 'Unity', 'Game', 'Education'],
     },
     {
       title: 'PUZZLE - Game Edukasi Mencocokan Posisi Gambar',
       image: '/images/Proyek/game-edukasi/001-halaman-loading.png',
       subProyek: '/subproyek8',
-      tags: ['Unity', 'C#', '2D', 'Game Edukasi'],
+      tags: ['Unity', 'C#', '2D', 'Game'],
     },
     {
       title: 'APP Wallet',
@@ -65,60 +70,85 @@ const ProyekAll = () => {
       title: 'APP Mamin',
       image: '/images/Proyek/app-mamin/halaman-login.png',
       subProyek: '/subproyek10',
-      tags: ['Web App', 'Dashboard', 'Makan', 'Minum'],
+      tags: ['Web App', 'Dashboard', 'F&B'],
     },
     {
       title: 'Sistem Pembayaran SPP',
       image: '/images/Proyek/spp/halaman-login.png',
       subProyek: '/subproyek11',
-      tags: ['Web App', 'Admin', 'Guru', 'Pembayaran'],
+      tags: ['Web App', 'Admin', 'Teacher', 'Payment'],
     },
     {
       title: 'Hybrid Monte Carlo',
       image: '/images/Proyek/hybrid-montecarlo/halaman-dashboard.png',
       subProyek: '/subproyek12',
-      tags: ['Web App', 'Monte Carlo', 'Smothing', 'Analisis'],
+      tags: ['Web App', 'Monte Carlo', 'Smoothing', 'Analysis'],
     },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen mt-15">
+    <div className="flex flex-col min-h-screen">
       <Header />
 
-      <section className="bg-[#F0F8FF] py-10 px-4 md:px-20">
-        <div className="max-w-6xl mx-auto">
-          <button onClick={() => navigate('/')} className="inline-flex items-center px-6 py-2 bg-[#356699] text-white rounded-full hover:bg-[#4682B4] transition duration-200 cursor-pointer mb-8">
-            Kembali
+      <main className="flex-grow pt-32 pb-20 bg-primary/5">
+        <div className="container mx-auto px-4">
+          {/* Back Button */}
+          <button 
+            onClick={() => navigate('/')} 
+            className="group flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all cursor-pointer"
+          >
+            <FaChevronLeft className="text-sm" />
+            {t.back_btn}
           </button>
 
-          <div className="text-center mb-6">
-            <hr className="border-[#4682B4] border-t-4 w-20 mx-auto mb-4" />
-            <h2 className="text-3xl font-semibold text-[#4682B4]">Portofolio Saya</h2>
+          {/* Title Header */}
+          <div className="space-y-4 mb-12 text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-text-dark tracking-tight">
+              {t.title}
+            </h1>
+            <p className="text-gray-500 max-w-2xl">
+              {language === 'en' 
+                ? "Explore my comprehensive journey through software engineering, from complex web systems to interactive AR/VR experiences."
+                : "Jelajahi perjalanan komprehensif saya melalui software engineering, mulai dari sistem web yang kompleks hingga pengalaman AR/VR interaktif."}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+          {/* Grid Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {cardDescriptions.map((card, index) => (
-              <div key={index} className="relative bg-white p-6 rounded-lg shadow-lg">
-                <img src={card.image} alt={card.title} className="w-full h-36 object-cover rounded-lg mb-4" />
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {card.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">
-                      {tag}
-                    </span>
-                  ))}
+              <div 
+                key={index}
+                onClick={() => navigate(card.subProyek)}
+                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col cursor-pointer"
+              >
+                <div className="relative overflow-hidden aspect-video">
+                  <img src={card.image} alt={card.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 
-                <h3 className="text-xl font-semibold text-left mb-2">{card.title}</h3>
+                <div className="p-6 flex-grow flex flex-col">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {card.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="text-[9px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                <button onClick={() => navigate(card.subProyek)} className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-2 rounded-full hover:bg-[#356699] transition duration-200 cursor-pointer">
-                  <FaArrowRight className="text-xl" />
-                </button>
+                  <h3 className="text-lg font-bold text-text-dark mb-4 group-hover:text-primary transition-colors line-clamp-2">
+                    {card.title}
+                  </h3>
+
+                  <div className="mt-auto flex items-center gap-2 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                    {language === 'en' ? 'View Project' : 'Lihat Proyek'}
+                    <FaArrowRight className="text-xs" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

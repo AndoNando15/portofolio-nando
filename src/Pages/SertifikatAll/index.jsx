@@ -1,7 +1,10 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaChevronLeft } from 'react-icons/fa';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../data/translations';
 import sertifikatMagang from '/Sertifikat/sertifikat-magang.png';
 import sertifikatVocabolary from '/Sertifikat/sertifikat-vocabolary.jpg';
 import sertifikatLomba from '/Sertifikat/sertifikat-lomba_code_championship_juara_3.png';
@@ -13,115 +16,151 @@ import sertifikatDaffodilsSpeakFirst from '/Sertifikat/sertifikat-daffodils-spea
 
 const SertifikatAll = () => {
   const navigate = useNavigate();
+  const { language } = useLanguage();
+  const t = translations[language].certificates;
+
+  const certificates = [
+    {
+      id: 'subsertifikat1',
+      title: 'CODE CHAMPIONSHIP : Musywil Jawa Timur 2023',
+      image: sertifikatLomba,
+      tags: ['Juara 3', 'Dec 2023'],
+      desc: language === 'en' 
+        ? 'Won 3rd place in the "Code Championship" during Musywil ke-V Permikomnas IX East Java.'
+        : 'Meraih Juara 3 dalam "Lomba Code Championship" selama Musywil ke-V Permikomnas wilayah IX Jawa Timur.'
+    },
+    {
+      id: 'subsertifikat2',
+      title: 'Yayasan Transformasi Bhakti Negeri (TBN INDONESIA)',
+      image: sertifikatMagang,
+      tags: ['Internship', '2024'],
+      desc: language === 'en'
+        ? 'Received Internship Certificate for Web Revamp project from TBN Indonesia.'
+        : 'Menerima Sertifikat Magang untuk proyek Revamp Website dari TBN Indonesia.'
+    },
+    {
+      id: 'subsertifikat3',
+      title: 'Peace English Academy',
+      image: sertifikatVocabolary,
+      tags: ['Vocab 1', 'Jan 2022'],
+      desc: language === 'en'
+        ? 'Completed Vocabulary 1 course with "B" grade at Peace English Academy.'
+        : 'Menyelesaikan kursus VOCABULARY 1 dengan nilai "B" di Peace English Academy.'
+    },
+    {
+      id: 'subsertifikat4',
+      title: 'AETS Score Report',
+      image: sertifikatAETS,
+      tags: ['Score: 457', 'Apr 2026'],
+      desc: language === 'en'
+        ? 'English proficiency test result covering Listening, Structure, and Reading.'
+        : 'Hasil tes kemahiran bahasa Inggris meliputi Listening, Structure, dan Reading.'
+    },
+    {
+      id: 'subsertifikat5',
+      title: 'Mahir Bahasa',
+      image: sertifikatMahirBahasa,
+      tags: ['Speaking Two', 'Aug 2025'],
+      desc: language === 'en'
+        ? 'Achieved Speaking Two Intermediate program completion certificate.'
+        : 'Meraih sertifikat penyelesaian program Speaking Two Intermediate.'
+    },
+    {
+      id: 'subsertifikat6',
+      title: 'Mr. Pepsi Upgrade - Impromptu Program',
+      image: sertifikatMrPepsi,
+      tags: ['Intermediate', 'Dec 2025'],
+      desc: language === 'en'
+        ? 'Certified for spontaneous and confident communication in the Impromptu program.'
+        : 'Bersertifikat untuk komunikasi spontan dan percaya diri dalam program Impromptu.'
+    },
+    {
+      id: 'subsertifikat7',
+      title: 'The Daffodils',
+      image: sertifikatDaffodilsGrading,
+      tags: ['Grading', 'English'],
+      desc: language === 'en'
+        ? 'Level progression and learning path in English speaking development.'
+        : 'Progres level dan jalur pembelajaran dalam pengembangan berbicara bahasa Inggris.'
+    },
+    {
+      id: 'subsertifikat8',
+      title: 'The Daffodils - Speak First',
+      image: sertifikatDaffodilsSpeakFirst,
+      tags: ['Good', 'Aug 2025'],
+      desc: language === 'en'
+        ? 'Built a strong foundation in English speaking through the Speak First program.'
+        : 'Membangun fondasi yang kuat dalam berbicara bahasa Inggris melalui program Speak First.'
+    }
+  ];
 
   return (
-    <div className="flex flex-col min-h-screen mt-15">
+    <div className="flex flex-col min-h-screen">
       <Header />
 
-      <section className="bg-[#F0F8FF] py-10 px-4 md:px-20">
-        <div className="max-w-6xl mx-auto">
-          <button onClick={() => navigate('/')} className="inline-flex items-center px-6 py-2 bg-[#356699] text-white rounded-full hover:bg-[#4682B4] transition duration-200 cursor-pointer mb-8">
-            Kembali
+      <main className="flex-grow pt-32 pb-20 bg-primary/5">
+        <div className="container mx-auto px-4">
+          {/* Back Button */}
+          <button 
+            onClick={() => navigate('/')} 
+            className="group flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all cursor-pointer"
+          >
+            <FaChevronLeft className="text-sm" />
+            {translations[language].projects.back_btn}
           </button>
 
-          <div className="text-center mb-6">
-            <hr className="border-[#4682B4] border-t-4 w-20 mx-auto mb-4" />
-            <h2 className="text-3xl font-semibold text-[#4682B4]">Sertifikat Saya</h2>
+          {/* Title Header */}
+          <div className="space-y-4 mb-12 text-center md:text-left">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-text-dark tracking-tight">
+              {t.title}
+            </h1>
+            <p className="text-gray-500 max-w-2xl">
+              {language === 'en' 
+                ? "Academic and professional certifications validating my expertise and commitment to continuous learning."
+                : "Sertifikasi akademik dan profesional yang memvalidasi keahlian dan komitmen saya untuk terus belajar."}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-            {/* Card 1 */}
-            <div className="relative bg-white p-6 rounded-lg shadow-lg">
-              <img src={sertifikatLomba} alt="Sertifikat 1" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-left mb-2">CODE CHAMPIONSHIP : Musywil Jawa Timur 2023</h3>
-              <div className="text-sm text-gray-600 mb-2">Juara 3 - 22 Desember 2023</div>
-              <p className="text-sm text-gray-600 mb-4 text-justify">Proud to share that I won 3rd place in the "Lomba Code Championship" during the Musyawarah Wilayah ke-V Permikomnas wilayah IX Jawa Timur on December 22, 2023!</p>
-              <button onClick={() => navigate('/subsertifikat1')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
-                Selengkapnya <FaArrowRight className="ml-2" />
-              </button>
-            </div>
+          {/* Grid Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {certificates.map((cert) => (
+              <div 
+                key={cert.id}
+                onClick={() => navigate(`/${cert.id}`)}
+                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col cursor-pointer"
+              >
+                <div className="relative overflow-hidden aspect-[4/3]">
+                  <img src={cert.image} alt={cert.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
 
-            {/* Card 2 */}
-            <div className="relative bg-white p-6 rounded-lg shadow-lg">
-              <img src={sertifikatMagang} alt="Sertifikat 2" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-left mb-2">Yayasan Transformasi Bhakti Negeri (TBN INDONESIA)</h3>
-              <div className="text-sm text-gray-600 mb-2">Revamp Website - IMM - April - July 2024</div>
-              <p className="text-sm text-gray-600 mb-4 text-justify">I’m proud to receive the Internship Certificate from Yayasan Transformasi Bhakti Negeri (TBN Indonesia) for the period of April 29th - June 29th, 2024.</p>
-              <button onClick={() => navigate('/subsertifikat2')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
-                Selengkapnya <FaArrowRight className="ml-2" />
-              </button>
-            </div>
+                <div className="p-6 flex-grow flex flex-col">
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {cert.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="text-[9px] font-bold uppercase bg-primary/10 text-primary px-3 py-1 rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-            {/* Card 3 */}
-            <div className="relative bg-white p-6 rounded-lg shadow-lg">
-              <img src={sertifikatVocabolary} alt="Sertifikat 3" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-left mb-2">Peace English Academy</h3>
-              <div className="text-sm text-gray-600 mb-2">Vocabulary 1 - Priode 25 Januari 2022</div>
-              <p className="text-sm text-gray-600 mb-4 text-justify">
-                I’m thrilled to have completed the exam and received a certificate for finishing the VOCABULARY 1 course at Peace English Academy with a "B" grade (Very Good) on January 25th, 2022!
-              </p>
-              <button onClick={() => navigate('/subsertifikat3')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
-                Selengkapnya <FaArrowRight className="ml-2" />
-              </button>
-            </div>
+                  <h3 className="text-lg font-bold text-text-dark mb-3 line-clamp-2">
+                    {cert.title}
+                  </h3>
 
-            {/* Card 4 */}
-            <div className="relative bg-white p-6 rounded-lg shadow-lg">
-              <img src={sertifikatAETS} alt="Sertifikat 4" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-left mb-2">AETS Score Report</h3>
-              <div className="text-sm text-gray-600 mb-2">AETS - Overall Score 457 - April 11, 2026</div>
-              <p className="text-sm text-gray-600 mb-4 text-justify">This certificate shows my English proficiency test result covering Listening, Structure, and Reading skills with an overall score of 457.</p>
-              <button onClick={() => navigate('/subsertifikat4')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
-                Selengkapnya <FaArrowRight className="ml-2" />
-              </button>
-            </div>
+                  <p className="text-xs text-gray-500 mb-6 line-clamp-3">
+                    {cert.desc}
+                  </p>
 
-            {/* Card 5 */}
-            <div className="relative bg-white p-6 rounded-lg shadow-lg">
-              <img src={sertifikatMahirBahasa} alt="Sertifikat 5" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-left mb-2">Mahir Bahasa</h3>
-              <div className="text-sm text-gray-600 mb-2">Speaking Two Intermediate - 25 August 2025</div>
-              <p className="text-sm text-gray-600 mb-4 text-justify">This certificate represents my achievement in completing the Speaking Two Intermediate program and improving my spoken English skills.</p>
-              <button onClick={() => navigate('/subsertifikat5')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
-                Selengkapnya <FaArrowRight className="ml-2" />
-              </button>
-            </div>
-
-            {/* Card 6 */}
-            <div className="relative bg-white p-6 rounded-lg shadow-lg">
-              <img src={sertifikatMrPepsi} alt="Sertifikat 6" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-left mb-2">Mr. Pepsi Upgrade</h3>
-              <div className="text-sm text-gray-600 mb-2">Impromptu Intermediate - 25 December 2025</div>
-              <p className="text-sm text-gray-600 mb-4 text-justify">This certificate reflects my ability to communicate ideas spontaneously and confidently through the Impromptu program.</p>
-              <button onClick={() => navigate('/subsertifikat6')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
-                Selengkapnya <FaArrowRight className="ml-2" />
-              </button>
-            </div>
-
-            {/* Card 7 */}
-            <div className="relative bg-white p-6 rounded-lg shadow-lg">
-              <img src={sertifikatDaffodilsGrading} alt="Sertifikat 7" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-left mb-2">The Daffodils</h3>
-              <div className="text-sm text-gray-600 mb-2">Grading - Level Reference - English Program</div>
-              <p className="text-sm text-gray-600 mb-4 text-justify">This grading reference shows the level progression and learning path in English speaking and communication development.</p>
-              <button onClick={() => navigate('/subsertifikat7')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
-                Selengkapnya <FaArrowRight className="ml-2" />
-              </button>
-            </div>
-
-            {/* Card 8 */}
-            <div className="relative bg-white p-6 rounded-lg shadow-lg">
-              <img src={sertifikatDaffodilsSpeakFirst} alt="Sertifikat 8" className="w-full h-48 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold text-left mb-2">The Daffodils</h3>
-              <div className="text-sm text-gray-600 mb-2">Speak First - Good - 29 August 2025</div>
-              <p className="text-sm text-gray-600 mb-4 text-justify">This certificate marks my achievement in completing the Speak First program and building a stronger foundation in English speaking.</p>
-              <button onClick={() => navigate('/subsertifikat8')} className="text-blue-600 hover:underline flex items-center cursor-pointer">
-                Selengkapnya <FaArrowRight className="ml-2" />
-              </button>
-            </div>
+                  <div className="mt-auto flex items-center gap-2 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                    {t.more}
+                    <FaArrowRight className="text-xs" />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </main>
 
       <Footer />
     </div>

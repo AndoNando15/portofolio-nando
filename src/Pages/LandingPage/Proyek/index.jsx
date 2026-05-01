@@ -2,85 +2,101 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import halamanJadwal from '/images/Proyek/algoritma-genetika/HALAMAN-LOGIN.png';
+import { useLanguage } from '../../../context/LanguageContext';
+import { translations } from '../../../data/translations';
 
 const Proyek = () => {
   const navigate = useNavigate();
+  const { language } = useLanguage();
+  const t = translations[language].projects;
+
+  const projectList = [
+    {
+      id: 'subproyek1',
+      title: 'Algoritma Genetika - Penjadwalan Website',
+      image: halamanJadwal,
+      tags: ['UI/UX Design', 'PHP', 'Laravel', 'GA']
+    },
+    {
+      id: 'subproyek8',
+      title: 'PUZZLE - Game Edukasi Mencocokan Posisi Gambar',
+      image: '/images/Proyek/game-edukasi/001-halaman-loading.png',
+      tags: ['Unity', 'C#', '2D', 'UI/UX']
+    },
+    {
+      id: 'subproyek10',
+      title: 'APP Mamin',
+      image: '/images/Proyek/app-mamin/halaman-login.png',
+      tags: ['Web App', 'Dashboard', 'Makan & Minum']
+    }
+  ];
 
   return (
-    <section className="bg-[#F0F8FF] py-10 px-4 md:px-20">
-      <div className="max-w-6xl mx-auto">
-        {/* Title and Divider */}
-        <div className="flex flex-wrap justify-between items-center mb-10">
-          <h2 className="text-3xl font-semibold flex items-center mb-4 sm:mb-0">
-            <span className="border-l-4 pl-4 border-[#4682B4] mr-3">Portofolio Saya</span>
-          </h2>
-
-          {/* Button for desktop */}
-          <div className="hidden sm:flex justify-end">
-            <button onClick={() => navigate('/proyek')} className="cursor-pointer inline-flex items-center px-6 py-2 bg-[#4682B4] text-white rounded-full border border-[#4682B4] hover:bg-[#356699] transition duration-200">
-              Lihat Semua Proyek
-              <FaArrowRight className="ml-2" />
-            </button>
-          </div>
-        </div>
-
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-          {/* Card 1 */}
-          <div className="relative bg-white p-6 rounded-lg shadow-lg">
-            <img src={halamanJadwal} alt="Proyek 1" className="w-full h-36 object-cover rounded-lg mb-4" />
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">UI/UX Design</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">PHP</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">Laravel</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">GA</span>
-            </div>
-            <h3 className="text-xl font-semibold text-left mb-2">Algoritma Genetika - Penjadwalan Website</h3>
-
-            <button onClick={() => navigate('/subproyek1')} className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200 cursor-pointer">
-              <FaArrowRight className="text-2xl" />
-            </button>
+    <section id="proyek" className="py-20">
+      <div className="container mx-auto px-4">
+        {/* Title */}
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div className="space-y-2 text-center md:text-left">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-dark flex items-center justify-center md:justify-start gap-3">
+              <span className="w-10 h-1 bg-primary rounded-full"></span>
+              {t.title}
+            </h2>
+            <p className="text-gray-600 max-w-md">
+              {language === 'en' 
+                ? "Showcasing some of my best work across web development and design."
+                : "Menampilkan beberapa karya terbaik saya di berbagai pengembangan web dan desain."}
+            </p>
           </div>
 
-          {/* Card 2 */}
-          <div className="relative bg-white p-6 rounded-lg shadow-lg">
-            <img src="/images/Proyek/game-edukasi/001-halaman-loading.png" alt="Proyek 2" className="w-full h-36 object-cover rounded-lg mb-4" />
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">Unity</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">C#</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">2D</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">UI/UX</span>
-            </div>
-            <h3 className="text-xl font-semibold text-left mb-2">PUZZLE - Game Edukasi Mencocokan Posisi Gambar</h3>
-
-            <button onClick={() => navigate('/subproyek8')} className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200 cursor-pointer">
-              <FaArrowRight className="text-2xl" />
-            </button>
-          </div>
-
-          {/* Card 3 */}
-          <div className="relative bg-white p-6 rounded-lg shadow-lg">
-            <img src="/images/Proyek/app-mamin/halaman-login.png" alt="Proyek 3" className="w-full h-36 object-cover rounded-lg mb-4" />
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">Web App</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">Dashboard</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">Dataset</span>
-              <span className="text-xs bg-blue-100 text-black py-1 px-3 rounded-full">Makan & Minum</span>
-            </div>
-            <h3 className="text-xl font-semibold text-left mb-2">APP Mamin</h3>
-
-            <button onClick={() => navigate('/subproyek10')} className="absolute bottom-4 right-4 bg-[#4682B4] text-white p-1 rounded-full hover:bg-[#356699] transition duration-200 cursor-pointer">
-              <FaArrowRight className="text-2xl" />
-            </button>
-          </div>
-        </div>
-
-        {/* Button for mobile */}
-        <div className="flex justify-center mt-6 sm:hidden w-full">
-          <button onClick={() => navigate('/proyek')} className="inline-flex items-center px-6 py-2 bg-[#4682B4] text-white rounded-full border border-[#4682B4] hover:bg-[#356699] transition duration-200 w-full justify-center">
-            Lihat Semua Proyek
-            <FaArrowRight className="ml-2" />
+          <button 
+            onClick={() => navigate('/proyek')} 
+            className="btn-outline flex items-center gap-2 group cursor-pointer"
+          >
+            {t.all_btn}
+            <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
           </button>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectList.map((project) => (
+            <div 
+              key={project.id}
+              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col"
+            >
+              {/* Image Container */}
+              <div className="relative overflow-hidden aspect-video">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 flex-grow flex flex-col">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <h3 className="text-xl font-bold text-text-dark mb-6 line-clamp-2">
+                  {project.title}
+                </h3>
+
+                <button 
+                  onClick={() => navigate(`/${project.id}`)}
+                  className="mt-auto w-12 h-12 flex items-center justify-center bg-gray-100 text-text-dark rounded-full group-hover:bg-primary group-hover:text-white transition-all duration-300 self-end"
+                >
+                  <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform" />
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

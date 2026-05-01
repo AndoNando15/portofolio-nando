@@ -1,6 +1,6 @@
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import HalamanUtama from '../LandingPage/HalamanUtama';
+import HalamanUtama from './HalamanUtama';
 import Kemampuan from './Kemampuan';
 import KontakKami from './KontakKami';
 import Proyek from './Proyek';
@@ -9,19 +9,18 @@ import TentangSaya from './TentangSaya';
 
 const LandingPage = () => {
   return (
-    <>
-      <div className="flex flex-col min-h-screen mt-15">
-        <Header />
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow">
         <HalamanUtama />
         <Kemampuan />
         <TentangSaya />
         <Proyek />
         <Sertifikat />
         <KontakKami />
-        <Footer />
-      </div>
-    </>
+      </main>
+      <Footer />
+    </div>
   );
 };
-
 export default LandingPage;

@@ -1,69 +1,102 @@
 import React, { useState } from 'react';
 import tentangsayaImage from '/images/Konten/2-FOTO-TENTANG-SAYA.svg';
 import downloadCV from '/File/CV-HERLANDO-PRAYITNO-v2.pdf';
+import { useLanguage } from '../../../context/LanguageContext';
+import { translations } from '../../../data/translations';
 
 const TentangSaya = () => {
+  const { language } = useLanguage();
+  const t = translations[language].about;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="w-full bg-[#4682b4] py-10 px-4 md:px-20">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
-        {/* Gambar */}
-        <div className="mb-6 md:mb-0 w-full flex justify-center">
-          <img src={tentangsayaImage} alt="Tentang Saya" className="w-48 md:w-100 h-auto object-cover" />
-        </div>
+    <section id="tentang-saya" className="py-20 bg-primary text-white overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Image */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-white/20 rounded-3xl blur-3xl group-hover:bg-white/30 transition-colors"></div>
+              <img 
+                src={tentangsayaImage} 
+                alt="Tentang Saya" 
+                className="relative z-10 w-64 md:w-[400px] h-auto object-cover transform hover:scale-105 transition-transform duration-500 drop-shadow-2xl" 
+              />
+            </div>
+          </div>
 
-        {/* Deskripsi */}
-        <div className="text-white text-center md:text-left md:ml-8 w-full">
-          <p className="border-l-4 text-lg font-semibold mb-5 text-left pl-4">Tentang Saya</p>
+          {/* Description */}
+          <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+            <div className="inline-flex items-center gap-3">
+              <span className="w-12 h-1 bg-white/30 rounded-full"></span>
+              <span className="text-lg font-bold tracking-widest uppercase opacity-80">{t.title}</span>
+            </div>
 
-          <h3 className="text-3xl font-semibold mb-4">Siapa Herlando Prayitno?</h3>
+            <h3 className="text-3xl md:text-5xl font-bold leading-tight">
+              {t.question}
+            </h3>
 
-          <p className="text-lg mb-6 text-justify">
-            Lulusan Teknik Informatika yang tertarik pada pengembangan perangkat lunak dan sistem. Memiliki pengalaman dalam membangun aplikasi sesuai kebutuhan pengguna, serta terus belajar dan berkembang di bidang software engineering.
-          </p>
+            <p className="text-lg md:text-xl opacity-90 leading-relaxed text-justify">
+              {t.description}
+            </p>
 
-          <div className="flex justify-center md:justify-start">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#85C8FF] text-[#0f172a] text-sm md:text-base font-semibold shadow-md hover:bg-[#6aa6d7] hover:text-white hover:shadow-lg transition-all duration-300 cursor-pointer"
-            >
-              Lihat CV
-            </button>
+            <div className="flex justify-center lg:justify-start pt-4">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="px-8 py-4 rounded-2xl bg-white text-primary font-bold text-lg shadow-xl hover:bg-primary-light hover:text-white hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                {t.cv_btn}
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Modal */}
+      {/* CV Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
-          <div className="bg-white w-full max-w-4xl rounded-2xl shadow-xl overflow-hidden">
-            {/* Header Modal */}
-            <div className="flex items-center justify-between px-4 md:px-6 py-4 border-b">
-              <h2 className="text-lg md:text-xl font-semibold text-gray-800">Preview CV Herlando Prayitno</h2>
-              <button onClick={() => setIsModalOpen(false)} className="text-gray-600 hover:text-black text-2xl leading-none cursor-pointer">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setIsModalOpen(false)}></div>
+          <div className="relative bg-white w-full max-w-5xl rounded-3xl shadow-2xl overflow-hidden animate-zoom-in">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b">
+              <h2 className="text-xl font-bold text-text-dark">{t.cv_title}</h2>
+              <button 
+                onClick={() => setIsModalOpen(false)} 
+                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-500 hover:text-black transition-colors cursor-pointer"
+              >
                 &times;
               </button>
             </div>
 
-            {/* Isi Modal */}
-            <div className="p-4 md:p-6">
-              <iframe src={downloadCV} title="CV Herlando Prayitno" className="w-full h-[70vh] rounded-lg border" />
+            {/* Content */}
+            <div className="p-4 md:p-6 bg-gray-50">
+              <iframe 
+                src={downloadCV} 
+                title="CV Herlando Prayitno" 
+                className="w-full h-[65vh] rounded-2xl border bg-white shadow-inner" 
+              />
 
-              <div className="flex flex-col sm:flex-row gap-3 mt-4 justify-end">
-                <a href={downloadCV} download="CV_Herlando_Prayitno.pdf" className="bg-[#4682B4] text-white py-2 px-5 rounded-lg hover:bg-[#356699] transition text-center">
-                  Unduh CV
+              <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-end">
+                <a 
+                  href={downloadCV} 
+                  download="CV_Herlando_Prayitno.pdf" 
+                  className="px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition shadow-md text-center"
+                >
+                  {t.cv_download}
                 </a>
 
-                <button onClick={() => setIsModalOpen(false)} className="border border-gray-400 text-gray-700 py-2 px-5 rounded-lg hover:bg-gray-100 transition cursor-pointer">
-                  Tutup
+                <button 
+                  onClick={() => setIsModalOpen(false)} 
+                  className="px-6 py-3 border border-gray-300 text-gray-700 font-bold rounded-xl hover:bg-white transition cursor-pointer"
+                >
+                  {t.cv_close}
                 </button>
               </div>
             </div>
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

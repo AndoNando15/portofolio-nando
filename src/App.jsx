@@ -23,9 +23,13 @@ import SubSertifikat7 from './Pages/SertifikatAll/SubSertifikat7';
 import SubSertifikat8 from './Pages/SertifikatAll/SubSertifikat8';
 import SubProyek11 from './Pages/ProyekAll/SubProyek11';
 import SubProyek12 from './Pages/ProyekAll/SubProyek12';
+import ScrollToTop from './components/ScrollToTop';
+
 const App = () => {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route path="/" element={<LandingPage />} />
 
       {/* Bagian Proyek */}
@@ -55,7 +59,8 @@ const App = () => {
       <Route path="/subsertifikat8" element={<SubSertifikat8 />} />
 
       <Route path="*" element={<NotFound />} />
-    </Routes>
+      </Routes>
+    </>
   );
 };
 

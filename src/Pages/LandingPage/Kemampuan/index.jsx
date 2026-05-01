@@ -1,90 +1,79 @@
 import React from 'react';
-import { FaArrowRight, FaPaintBrush, FaMicrosoft, FaLaptopCode, FaVideo, FaTrello, FaCode, FaFigma, FaGithub, FaDatabase, FaJava, FaLanguage } from 'react-icons/fa';
+import { FaPaintBrush, FaMicrosoft, FaLaptopCode, FaVideo, FaTrello, FaCode, FaFigma, FaGithub, FaDatabase, FaJava, FaLanguage } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
+import { useLanguage } from '../../../context/LanguageContext';
+import { translations } from '../../../data/translations';
 
 const Kemampuan = () => {
-  // Data for skills
+  const { language } = useLanguage();
+  const t = translations[language].skills;
+
   const skills = [
-    { icon: <FaMicrosoft />, title: 'Microsoft Office (Word, Excel, PowerPoint, Access, dan lainnya)' },
+    { icon: <FaMicrosoft />, title: 'Microsoft Office (Word, Excel, PowerPoint, Access)' },
     { icon: <FaPaintBrush />, title: 'Adobe Photoshop' },
     { icon: <FaPaintBrush />, title: 'Corel Draw' },
     { icon: <FaVideo />, title: 'Adobe Premiere Pro' },
     { icon: <FaVideo />, title: 'CapCut' },
     { icon: <FaFigma />, title: 'Figma' },
-    { icon: <FaTrello />, title: 'Trello' },
-    { icon: <FaTrello />, title: 'Notion' },
-    { icon: <FaCode />, title: 'Visual Studio Code' },
-    { icon: <FaLaptopCode />, title: 'Postman' },
-    { icon: <FaGithub />, title: 'GitHub' },
-    { icon: <FaLaptopCode />, title: 'Unity' },
-    { icon: <FaLaptopCode />, title: 'NetBeans' },
+    { icon: <FaTrello />, title: 'Trello / Notion' },
+    { icon: <FaCode />, title: 'Visual Studio Code / Postman' },
+    { icon: <FaGithub />, title: 'Git & GitHub' },
+    { icon: <FaLaptopCode />, title: 'Unity / NetBeans' },
     { icon: <FaCode />, title: 'PHP (Laravel)' },
     { icon: <FaCode />, title: 'HTML, CSS, JavaScript' },
     { icon: <FaCode />, title: 'React' },
-    { icon: <FaLaptopCode />, title: 'MIT App Inventor' },
     { icon: <FaDatabase />, title: 'MySQL / Database Management' },
     { icon: <FaLaptopCode />, title: 'REST API Development' },
-    { icon: <FaGithub />, title: 'Git and GitHub' },
-    { icon: <FaJava />, title: 'Java' },
-    { icon: <FaCode />, title: 'C#' },
-    { icon: <FaLanguage />, title: 'English' },
-    { icon: <FaLanguage />, title: 'Mandarin' },
+    { icon: <FaJava />, title: 'Java / C#' },
+    { icon: <FaLanguage />, title: 'English / Mandarin' },
   ];
 
   return (
-    <section className="bg-[#F0F8FF] py-12 px-4 md:px-20">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-wrap justify-between items-center mb-10">
-          {/* Title and Divider */}
-          <h2 className="text-3xl font-semibold flex items-center mb-4 sm:mb-0">
-            <span className="border-l-4 pl-4 border-[#4682B4] mr-3">Kemampuan</span>
-          </h2>
+    <section id="kemampuan" className="py-20 bg-primary/5">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+          <div className="space-y-2">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-dark flex items-center gap-3">
+              <span className="w-10 h-1 bg-primary rounded-full"></span>
+              {t.title}
+            </h2>
+            <p className="text-gray-600 max-w-md">
+              {language === 'en' 
+                ? "A diverse set of technical and creative skills acquired through academic and practical experience."
+                : "Seperangkat keterampilan teknis dan kreatif yang diperoleh melalui pengalaman akademis dan praktis."}
+            </p>
+          </div>
         </div>
 
-        {/* Swiper Carousel */}
         <Swiper
-          modules={[Autoplay]}
-          spaceBetween={20}
-          slidesPerView={3}
+          modules={[Autoplay, Pagination]}
+          spaceBetween={24}
+          slidesPerView={1}
           loop={true}
-          autoplay={{ delay: 1000, disableOnInteraction: false }}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 15,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
           }}
-          className="mySwiper"
+          className="pb-12"
         >
           {skills.map((skill, index) => (
-            <SwiperSlide key={index} className="w-auto">
-              <div className="relative bg-white p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-200">
-                <div className="text-5xl text-[#4682B4] mx-auto mb-4 flex justify-center items-center" style={{ minHeight: '80px' }}>
+            <SwiperSlide key={index}>
+              <div className="glass p-8 rounded-2xl h-full flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2">
+                <div className="text-5xl text-primary group-hover:text-white mb-6 transition-colors duration-300">
                   {skill.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-center mb-2">{skill.title}</h3>
+                <h3 className="text-xl font-bold mb-2">{skill.title}</h3>
+                <div className="w-8 h-1 bg-primary/20 group-hover:bg-white/30 rounded-full mt-auto"></div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Button for mobile */}
-        {/* <div className="flex justify-center mt-6 sm:hidden w-full">
-          <a href="#" className="inline-flex items-center px-6 py-2 bg-[#4682B4] text-white rounded-full border border-[#4682B4] hover:bg-[#356699] transition duration-200 w-full sm:w-auto justify-center sm:justify-start">
-            Lihat Semua Kemampuan
-            <FaArrowRight className="ml-2" />
-          </a>
-        </div> */}
       </div>
     </section>
   );

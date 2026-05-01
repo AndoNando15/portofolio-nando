@@ -1,46 +1,86 @@
 import React from 'react';
-import { FaPlay } from 'react-icons/fa'; // Ikon play dari react-icons
+import { FaPlay, FaWhatsapp } from 'react-icons/fa';
 import bannerImage1 from '/images/Konten/3-foto-banner.png';
+import { useLanguage } from '../../../context/LanguageContext';
+import { translations } from '../../../data/translations';
 
 const HalamanUtama = () => {
-  return (
-    <section>
-      <div className="flex items-center justify-center  px-4 md:px-20 py-0 md:py-10 bg-[#F0F8FF]">
-        <div className="flex flex-col md:flex-row w-full max-w-6xl bg-[#F0F8FF] rounded-lg overflow-hidden">
-          {/* Bagian Kiri */}
-          <div className="w-full md:w-1/2 flex flex-col justify-start items-center md:items-start text-center md:text-left p-4 mt-6 md:mt-20">
-            <h5 className="text-xs md:text-sm font-semibold bg-gray-200 px-2 py-1 rounded-md w-max">Hallo Semuanya</h5>
+  const { language } = useLanguage();
+  const t = translations[language].hero;
 
-            <h1 className="text-3xl md:text-5xl font-semibold mt-3 leading-tight max-w-sm md:max-w-2xl">
-              Saya <span className="text-[#4682B4] font-bold">Herlando Prayitno</span> <br />
-              Software Engineering <br />
-              Asal <span className="text-[#4682B4] font-bold">Gresik.</span>
+  return (
+    <section id="halaman-utama" className="pt-24 pb-12 overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          {/* Left Content */}
+          <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
+            <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold animate-fade-in">
+              {t.greeting} 👋
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-text-dark leading-tight">
+              {t.intro} <span className="text-primary relative inline-block">
+                Herlando Prayitno
+                <span className="absolute bottom-1 left-0 w-full h-3 bg-primary/10 -z-10 rounded-full"></span>
+              </span>
+              <br />
+              <span className="text-3xl md:text-5xl opacity-90">{t.role}</span>
+              <br />
+              <span className="text-2xl md:text-4xl opacity-80">{t.from} <span className="text-primary font-extrabold">{t.city}</span></span>
             </h1>
 
-            {/* <p className="text-gray-600 mt-3 max-w-xs md:max-w-lg text-sm md:text-base">Saya Fresh Graduate Teknik Informatika Universitas Muhammadiyah Gresik tahun 2025</p> */}
+            {/* Mobile Image (Visible only on mobile) */}
+            <div className="lg:hidden w-full flex justify-center py-4">
+              <div className="relative z-10 animate-float">
+                <img 
+                  src={bannerImage1} 
+                  alt="Profile" 
+                  className="w-64 md:w-80 h-auto drop-shadow-2xl" 
+                />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+              </div>
+            </div>
 
-            {/* Tombol */}
-            {/* <div className="flex flex-wrap md:flex-nowrap gap-1 md:gap-4 mt-3 justify-center md:justify-start w-auto">
-              <button className="flex items-center justify-center bg-[#4682B4] text-white px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[9px] md:text-sm font-medium shadow-md hover:bg-[#356699] transition min-w-max cursor-pointer">
-                Lihat Portofolio Saya
-                <FaPlay className="ml-2 text-[7px] md:text-sm" />
+            <p className="text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+              {language === 'en' 
+                ? "Dedicated software engineer focusing on creating impactful digital solutions and robust web applications."
+                : "Software engineer yang berdedikasi fokus pada pembuatan solusi digital yang berdampak dan aplikasi web yang kuat."}
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
+              <button 
+                onClick={() => document.getElementById('proyek')?.scrollIntoView({ behavior: 'smooth' })}
+                className="btn-primary flex items-center gap-2 group cursor-pointer"
+              >
+                {t.cta_portfolio}
+                <FaPlay className="text-[10px] group-hover:translate-x-1 transition-transform" />
               </button>
 
               <button
-                onClick={() => window.open('https://wa.me/6285785455575?text=Halo%20Saya%20tertarik%20untuk%20melihat%20portofolio%20dan%20mendiskusikan%20peluang%20kerja.', '_blank')}
-                className="border-2 border-black px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[9px] md:text-sm font-medium shadow-md hover:bg-gray-200 transition min-w-max cursor-pointer"
+                onClick={() => window.open('https://wa.me/6285785455575?text=Halo%20Nando,%20I%20am%20interested%20in%20your%20services.', '_blank')}
+                className="btn-outline flex items-center gap-2 group cursor-pointer"
               >
-                Rekrut Saya
+                <FaWhatsapp className="text-lg group-hover:scale-110 transition-transform" />
+                {t.cta_hire}
               </button>
-            </div> */}
+            </div>
           </div>
 
-          {/* Bagian Kanan */}
-          <div className="w-full md:w-1/2 flex items-center justify-center relative">
-            <img src={bannerImage1} alt="Profile" className="w-90 md:w-150 h-auto" />
+          {/* Right Content (Desktop Image - Hidden on mobile) */}
+          <div className="hidden lg:flex w-full lg:w-1/2 relative justify-center lg:justify-end">
+            <div className="relative z-10 animate-float">
+              <img 
+                src={bannerImage1} 
+                alt="Profile" 
+                className="w-72 md:w-[450px] lg:w-[550px] h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
+              />
+              {/* Background Shapes */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
+            </div>
           </div>
         </div>
-      </div>{' '}
+      </div>
     </section>
   );
 };
