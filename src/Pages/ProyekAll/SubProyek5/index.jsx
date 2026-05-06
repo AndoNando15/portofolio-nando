@@ -54,7 +54,7 @@ const SubProyek1 = () => {
             {cardDescriptions.map((description, index) => (
               <div
                 key={index}
-                className="relative bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:z-20 cursor-pointer"
+                className="relative bg-white p-6 rounded-lg shadow-sm transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md hover:z-20 cursor-pointer"
                 onClick={() => openModal(description.image)} // Open modal when clicked
               >
                 <h6 className="text-xl font-semibold text-left mb-2">{description.title}</h6>

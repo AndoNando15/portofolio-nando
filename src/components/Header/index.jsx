@@ -44,8 +44,8 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
-      <div className="container mx-auto px-4">
-        <div className={`flex justify-between items-center p-2 md:p-3 rounded-2xl transition-all duration-300 ${scrolled ? 'glass shadow-lg' : 'bg-primary text-white shadow-md'}`}>
+      <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
+        <div className={`flex justify-between items-center p-2 md:p-3 rounded-2xl transition-all duration-300 ${scrolled ? 'glass shadow-sm' : 'bg-primary text-white shadow-md'}`}>
           {/* Logo */}
           <div className="flex items-center gap-2 pl-2">
             <h1 className={`text-lg sm:text-xl font-bold tracking-tight ${scrolled ? 'text-primary' : 'text-white'}`}>Nando Innovatech</h1>
@@ -99,7 +99,7 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         <div
-          className={`xl:hidden absolute left-4 right-4 mt-2 p-4 rounded-2xl glass shadow-2xl transition-all duration-300 origin-top ${
+          className={`xl:hidden absolute left-4 right-4 mt-2 p-4 rounded-2xl glass shadow-md transition-all duration-300 origin-top ${
             isOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'
           }`}
         >

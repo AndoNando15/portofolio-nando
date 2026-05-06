@@ -10,7 +10,7 @@ const HalamanUtama = () => {
 
   return (
     <section id="halaman-utama" className="pt-24 pb-12 overflow-hidden">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
@@ -35,16 +35,14 @@ const HalamanUtama = () => {
                 <img 
                   src={bannerImage1} 
                   alt="Profile" 
-                  className="w-64 md:w-80 h-auto drop-shadow-2xl" 
+                  className="w-64 md:w-80 h-auto drop-shadow-md" 
                 />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
               </div>
             </div>
 
             <p className="text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
-              {language === 'en' 
-                ? "Dedicated software engineer focusing on creating impactful digital solutions and robust web applications."
-                : "Software engineer yang berdedikasi fokus pada pembuatan solusi digital yang berdampak dan aplikasi web yang kuat."}
+              {t.desc}
             </p>
 
             {/* Buttons */}
@@ -73,7 +71,7 @@ const HalamanUtama = () => {
               <img 
                 src={bannerImage1} 
                 alt="Profile" 
-                className="w-72 md:w-[450px] lg:w-[550px] h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500" 
+                className="w-72 md:w-[450px] lg:w-[550px] h-auto drop-shadow-md hover:scale-105 transition-transform duration-500" 
               />
               {/* Background Shapes */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse"></div>

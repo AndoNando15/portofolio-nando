@@ -18,6 +18,7 @@ const SertifikatAll = () => {
   const navigate = useNavigate();
   const { language } = useLanguage();
   const t = translations[language].certificates;
+  const cd = translations[language].cert_all_cards;
 
   const certificates = [
     {
@@ -25,72 +26,56 @@ const SertifikatAll = () => {
       title: 'CODE CHAMPIONSHIP : Musywil Jawa Timur 2023',
       image: sertifikatLomba,
       tags: ['Juara 3', 'Dec 2023'],
-      desc: language === 'en' 
-        ? 'Won 3rd place in the "Code Championship" during Musywil ke-V Permikomnas IX East Java.'
-        : 'Meraih Juara 3 dalam "Lomba Code Championship" selama Musywil ke-V Permikomnas wilayah IX Jawa Timur.'
+      desc: cd.cert1_desc
     },
     {
       id: 'subsertifikat2',
       title: 'Yayasan Transformasi Bhakti Negeri (TBN INDONESIA)',
       image: sertifikatMagang,
       tags: ['Internship', '2024'],
-      desc: language === 'en'
-        ? 'Received Internship Certificate for Web Revamp project from TBN Indonesia.'
-        : 'Menerima Sertifikat Magang untuk proyek Revamp Website dari TBN Indonesia.'
+      desc: cd.cert2_desc
     },
     {
       id: 'subsertifikat3',
       title: 'Peace English Academy',
       image: sertifikatVocabolary,
       tags: ['Vocab 1', 'Jan 2022'],
-      desc: language === 'en'
-        ? 'Completed Vocabulary 1 course with "B" grade at Peace English Academy.'
-        : 'Menyelesaikan kursus VOCABULARY 1 dengan nilai "B" di Peace English Academy.'
+      desc: cd.cert3_desc
     },
     {
       id: 'subsertifikat4',
       title: 'AETS Score Report',
       image: sertifikatAETS,
       tags: ['Score: 457', 'Apr 2026'],
-      desc: language === 'en'
-        ? 'English proficiency test result covering Listening, Structure, and Reading.'
-        : 'Hasil tes kemahiran bahasa Inggris meliputi Listening, Structure, dan Reading.'
+      desc: cd.cert4_desc
     },
     {
       id: 'subsertifikat5',
       title: 'Mahir Bahasa',
       image: sertifikatMahirBahasa,
       tags: ['Speaking Two', 'Aug 2025'],
-      desc: language === 'en'
-        ? 'Achieved Speaking Two Intermediate program completion certificate.'
-        : 'Meraih sertifikat penyelesaian program Speaking Two Intermediate.'
+      desc: cd.cert5_desc
     },
     {
       id: 'subsertifikat6',
       title: 'Mr. Pepsi Upgrade - Impromptu Program',
       image: sertifikatMrPepsi,
       tags: ['Intermediate', 'Dec 2025'],
-      desc: language === 'en'
-        ? 'Certified for spontaneous and confident communication in the Impromptu program.'
-        : 'Bersertifikat untuk komunikasi spontan dan percaya diri dalam program Impromptu.'
+      desc: cd.cert6_desc
     },
     {
       id: 'subsertifikat7',
       title: 'The Daffodils',
       image: sertifikatDaffodilsGrading,
       tags: ['Grading', 'English'],
-      desc: language === 'en'
-        ? 'Level progression and learning path in English speaking development.'
-        : 'Progres level dan jalur pembelajaran dalam pengembangan berbicara bahasa Inggris.'
+      desc: cd.cert7_desc
     },
     {
       id: 'subsertifikat8',
       title: 'The Daffodils - Speak First',
       image: sertifikatDaffodilsSpeakFirst,
       tags: ['Good', 'Aug 2025'],
-      desc: language === 'en'
-        ? 'Built a strong foundation in English speaking through the Speak First program.'
-        : 'Membangun fondasi yang kuat dalam berbicara bahasa Inggris melalui program Speak First.'
+      desc: cd.cert8_desc
     }
   ];
 
@@ -99,7 +84,7 @@ const SertifikatAll = () => {
       <Header />
 
       <main className="flex-grow pt-32 pb-20 bg-primary/5">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
           {/* Back Button */}
           <button 
             onClick={() => navigate('/')} 
@@ -115,9 +100,7 @@ const SertifikatAll = () => {
               {t.title}
             </h1>
             <p className="text-gray-500 max-w-2xl">
-              {language === 'en' 
-                ? "Academic and professional certifications validating my expertise and commitment to continuous learning."
-                : "Sertifikasi akademik dan profesional yang memvalidasi keahlian dan komitmen saya untuk terus belajar."}
+              {t.subtitle_all}
             </p>
           </div>
 
@@ -127,7 +110,7 @@ const SertifikatAll = () => {
               <div 
                 key={cert.id}
                 onClick={() => navigate(`/${cert.id}`)}
-                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col cursor-pointer"
+                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 border border-gray-100 flex flex-col cursor-pointer"
               >
                 <div className="relative overflow-hidden aspect-[4/3]">
                   <img src={cert.image} alt={cert.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />

@@ -33,7 +33,7 @@ const Proyek = () => {
 
   return (
     <section id="proyek" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
         {/* Title */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="space-y-2 text-center md:text-left">
@@ -42,9 +42,7 @@ const Proyek = () => {
               {t.title}
             </h2>
             <p className="text-gray-600 max-w-md">
-              {language === 'en' 
-                ? "Showcasing some of my best work across web development and design."
-                : "Menampilkan beberapa karya terbaik saya di berbagai pengembangan web dan desain."}
+              {t.subtitle}
             </p>
           </div>
 
@@ -62,7 +60,7 @@ const Proyek = () => {
           {projectList.map((project) => (
             <div 
               key={project.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col"
+              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 border border-gray-100 flex flex-col"
             >
               {/* Image Container */}
               <div className="relative overflow-hidden aspect-video">
@@ -90,7 +88,7 @@ const Proyek = () => {
 
                 <button 
                   onClick={() => navigate(`/${project.id}`)}
-                  className="mt-auto w-12 h-12 flex items-center justify-center bg-gray-100 text-text-dark rounded-full group-hover:bg-primary group-hover:text-white transition-all duration-300 self-end"
+                  className="mt-auto w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-gray-100 text-text-dark rounded-full group-hover:bg-primary group-hover:text-white transition-all duration-300 self-end"
                 >
                   <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform" />
                 </button>

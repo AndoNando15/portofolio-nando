@@ -52,7 +52,7 @@ const SubProyek10 = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {cardDescriptions.map((description, index) => (
-              <div key={index} className="relative bg-white p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:z-20 cursor-pointer" onClick={() => openModal(description.image)}>
+              <div key={index} className="relative bg-white p-6 rounded-lg shadow-sm transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md hover:z-20 cursor-pointer" onClick={() => openModal(description.image)}>
                 <h6 className="text-xl font-semibold text-left mb-2">{description.title}</h6>
                 <img src={description.image} alt={description.title} className="w-full h-36 object-cover rounded-lg mb-4" />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/30 text-white text-lg opacity-0 hover:opacity-100 transition-opacity duration-200 rounded-lg">Lihat Gambar</div>

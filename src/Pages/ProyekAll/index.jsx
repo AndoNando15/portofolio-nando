@@ -61,28 +61,10 @@ const ProyekAll = () => {
       tags: ['Unity', 'C#', '2D', 'Game'],
     },
     {
-      title: 'APP Wallet',
-      image: '/images/Proyek/app-wallet/halaman-login.png',
+      title: 'Pepsi Class',
+      image: '/images/Proyek/pepsi-class/1.png',
       subProyek: '/subproyek9',
-      tags: ['Web App', 'Dashboard', 'Dataset', 'Cluster'],
-    },
-    {
-      title: 'APP Mamin',
-      image: '/images/Proyek/app-mamin/halaman-login.png',
-      subProyek: '/subproyek10',
-      tags: ['Web App', 'Dashboard', 'F&B'],
-    },
-    {
-      title: 'Sistem Pembayaran SPP',
-      image: '/images/Proyek/spp/halaman-login.png',
-      subProyek: '/subproyek11',
-      tags: ['Web App', 'Admin', 'Teacher', 'Payment'],
-    },
-    {
-      title: 'Hybrid Monte Carlo',
-      image: '/images/Proyek/hybrid-montecarlo/halaman-dashboard.png',
-      subProyek: '/subproyek12',
-      tags: ['Web App', 'Monte Carlo', 'Smoothing', 'Analysis'],
+      tags: ['Website', 'Company Profile', 'Education'],
     },
   ];
 
@@ -91,7 +73,7 @@ const ProyekAll = () => {
       <Header />
 
       <main className="flex-grow pt-32 pb-20 bg-primary/5">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
           {/* Back Button */}
           <button 
             onClick={() => navigate('/')} 
@@ -107,9 +89,7 @@ const ProyekAll = () => {
               {t.title}
             </h1>
             <p className="text-gray-500 max-w-2xl">
-              {language === 'en' 
-                ? "Explore my comprehensive journey through software engineering, from complex web systems to interactive AR/VR experiences."
-                : "Jelajahi perjalanan komprehensif saya melalui software engineering, mulai dari sistem web yang kompleks hingga pengalaman AR/VR interaktif."}
+              {t.subtitle_all}
             </p>
           </div>
 
@@ -119,7 +99,7 @@ const ProyekAll = () => {
               <div 
                 key={index}
                 onClick={() => navigate(card.subProyek)}
-                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col cursor-pointer"
+                className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 border border-gray-100 flex flex-col cursor-pointer"
               >
                 <div className="relative overflow-hidden aspect-video">
                   <img src={card.image} alt={card.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -140,7 +120,7 @@ const ProyekAll = () => {
                   </h3>
 
                   <div className="mt-auto flex items-center gap-2 text-primary text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                    {language === 'en' ? 'View Project' : 'Lihat Proyek'}
+                    {t.view_project}
                     <FaArrowRight className="text-xs" />
                   </div>
                 </div>

@@ -33,7 +33,7 @@ const Kemampuan = () => {
 
   return (
     <section id="kemampuan" className="py-20 bg-primary/5">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div className="space-y-2">
             <h2 className="text-3xl md:text-4xl font-bold text-text-dark flex items-center gap-3">
@@ -41,9 +41,7 @@ const Kemampuan = () => {
               {t.title}
             </h2>
             <p className="text-gray-600 max-w-md">
-              {language === 'en' 
-                ? "A diverse set of technical and creative skills acquired through academic and practical experience."
-                : "Seperangkat keterampilan teknis dan kreatif yang diperoleh melalui pengalaman akademis dan praktis."}
+              {t.subtitle}
             </p>
           </div>
         </div>
@@ -64,7 +62,7 @@ const Kemampuan = () => {
         >
           {skills.map((skill, index) => (
             <SwiperSlide key={index}>
-              <div className="glass p-8 rounded-2xl h-full flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500 shadow-sm hover:shadow-xl hover:-translate-y-2">
+              <div className="glass p-8 rounded-2xl h-full flex flex-col items-center text-center group hover:bg-primary hover:text-white transition-all duration-500 shadow-sm hover:shadow-md hover:-translate-y-2">
                 <div className="text-5xl text-primary group-hover:text-white mb-6 transition-colors duration-300">
                   {skill.icon}
                 </div>

@@ -16,7 +16,7 @@ const CertificateTemplate = ({ title, tags, image, description }) => {
       <Header />
       
       <main className="flex-grow pt-32 pb-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
           {/* Back Button */}
           <button 
             onClick={() => navigate('/sertifikat')} 
@@ -43,7 +43,7 @@ const CertificateTemplate = ({ title, tags, image, description }) => {
             </div>
 
             {/* Image */}
-            <div className="glass p-2 rounded-3xl shadow-2xl overflow-hidden">
+            <div className="glass p-2 rounded-3xl shadow-md overflow-hidden">
               <img 
                 src={image} 
                 alt={title} 
@@ -55,7 +55,7 @@ const CertificateTemplate = ({ title, tags, image, description }) => {
             <div className="glass p-8 md:p-12 rounded-3xl space-y-6">
               <h3 className="text-2xl font-bold text-text-dark flex items-center gap-3">
                 <span className="w-8 h-1 bg-primary rounded-full"></span>
-                {language === 'en' ? 'Certificate Description' : 'Deskripsi Sertifikat'}
+                {t.cert_desc_label}
               </h3>
               <div className="text-gray-600 leading-relaxed space-y-4 whitespace-pre-line text-lg">
                 {description}

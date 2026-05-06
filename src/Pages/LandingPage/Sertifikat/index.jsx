@@ -11,6 +11,7 @@ const Sertifikat = () => {
   const navigate = useNavigate();
   const { language } = useLanguage();
   const t = translations[language].certificates;
+  const cc = translations[language].cert_cards;
 
   const certList = [
     {
@@ -18,33 +19,27 @@ const Sertifikat = () => {
       title: 'CODE CHAMPIONSHIP : Musywil Jawa Timur 2023',
       image: sertifikatLomba,
       tags: ['Juara 3', 'Dec 2023'],
-      desc: language === 'en' 
-        ? 'Won 3rd place in the "Code Championship" during Musywil ke-V Permikomnas IX East Java.'
-        : 'Meraih Juara 3 dalam "Lomba Code Championship" selama Musywil ke-V Permikomnas wilayah IX Jawa Timur.'
+      desc: cc.cert1_desc
     },
     {
       id: 'subsertifikat2',
       title: 'Yayasan Transformasi Bhakti Negeri (TBN INDONESIA)',
       image: sertifikatMagang,
       tags: ['Internship', '2024'],
-      desc: language === 'en'
-        ? 'Received Internship Certificate for Web Revamp project from TBN Indonesia.'
-        : 'Menerima Sertifikat Magang untuk proyek Revamp Website dari TBN Indonesia.'
+      desc: cc.cert2_desc
     },
     {
       id: 'subsertifikat6',
       title: 'Mr. Pepsi Upgrade - Impromptu Program',
       image: sertifikatMrPepsi,
       tags: ['Intermediate', '2025'],
-      desc: language === 'en'
-        ? 'Certified for spontaneous and confident communication in the Impromptu program.'
-        : 'Bersertifikat untuk komunikasi spontan dan percaya diri dalam program Impromptu.'
+      desc: cc.cert6_desc
     }
   ];
 
   return (
     <section id="sertifikat" className="py-20 bg-primary/5">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
         {/* Title */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="space-y-2 text-center md:text-left">
@@ -53,9 +48,7 @@ const Sertifikat = () => {
               {t.title}
             </h2>
             <p className="text-gray-600 max-w-md">
-              {language === 'en' 
-                ? "Academic and professional certifications validating my skills and achievements."
-                : "Sertifikasi akademik dan profesional yang memvalidasi keterampilan dan pencapaian saya."}
+              {t.subtitle}
             </p>
           </div>
 
@@ -73,7 +66,7 @@ const Sertifikat = () => {
           {certList.map((cert) => (
             <div 
               key={cert.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col"
+              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 border border-gray-100 flex flex-col"
             >
               <div className="relative overflow-hidden aspect-[4/3]">
                 <img 

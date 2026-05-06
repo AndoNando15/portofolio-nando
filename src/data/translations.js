@@ -16,11 +16,12 @@ export const translations = {
       city: "Gresik.",
       cta_portfolio: "See My Portfolio",
       cta_hire: "Hire Me",
+      desc: "Dedicated software engineer focusing on creating impactful digital solutions and robust web applications.",
     },
     about: {
       title: "About Me",
       question: "Who is Herlando Prayitno?",
-      description: "An Informatics Engineering graduate with a strong interest in software and systems development. Experienced in building applications tailored to user needs, continuously learning and growing in the field of software engineering.",
+      description: "Iam an Informatics Engineering graduate specializing in software and AI-driven application development. I use adaptable technologies based on project needs, with a strong focus on performance, scalability, and user-centered design. I have a solid foundation in programming and system development, and I am passionate about solving complex problems through efficient and innovative solutions. I enjoy working both independently and in teams, continuously learning new technologies, and improving my technical and analytical skills to deliver high-quality results.",
       cv_btn: "View CV",
       cv_title: "CV Preview",
       cv_download: "Download CV",
@@ -28,7 +29,7 @@ export const translations = {
     },
     skills: {
       title: "Skills",
-      all_btn: "See All Skills",
+      subtitle: "A diverse set of technical and creative skills acquired through academic and practical experience.",
     },
     projects: {
       title: "My Portfolio",
@@ -36,11 +37,18 @@ export const translations = {
       back_btn: "Back",
       view_img: "View Image",
       click_close: "Click anywhere to exit",
+      subtitle: "Showcasing some of my best work across web development and design.",
+      subtitle_all: "Explore my comprehensive journey through software engineering, from complex web systems to interactive AR/VR experiences.",
+      view_project: "View Project",
     },
     certificates: {
       title: "My Certificates",
       all_btn: "See All Certificates",
       more: "See More",
+      subtitle: "Academic and professional certifications validating my skills and achievements.",
+      subtitle_all: "Academic and professional certifications validating my expertise and commitment to continuous learning.",
+      cert_label: "Certificate",
+      cert_desc_label: "Certificate Description",
     },
     contact: {
       title: "Contact Me",
@@ -48,12 +56,47 @@ export const translations = {
       email: "Your Email",
       message: "Your Message",
       send: "Send Message",
+      subtitle: "Feel free to reach out for collaborations or just to say hi! I'm always open to discussing new projects.",
+      quick_msg: "Quick Message",
+      quick_msg_desc: "Send a message directly to my WhatsApp",
     },
     footer: {
       description: "Building modern and functional digital experiences.",
       rights: "All rights reserved.",
       developed_by: "Developed by Herlando Prayitno",
-    }
+    },
+    notfound: {
+      title: "Page Not Found",
+      back_btn: "Back to Home",
+    },
+    cert_details: {
+      back_btn: "Back",
+      cert1: `Proud to share that I won 3rd place in the "Lomba Code Championship" during the Musyawarah Wilayah ke-V Permikomnas wilayah IX Jawa Timur on December 22, 2023!\n\nThis achievement is a testament to the hard work and determination I've put into coding, and I'm truly grateful for the opportunity to compete alongside brilliant minds in the field of informatics. A big thank you to the organizers and all participants for making this event memorable. Looking forward to more challenges and opportunities to grow in the tech community!`,
+      cert2: `I received an Internship Certificate from Yayasan Transformasi Bhakti Negeri (TBN Indonesia) for participating in the Web Revamp project.\n\nThis internship experience gave me hands-on skills in real-world web development and strengthened my ability to collaborate with a team to deliver meaningful digital solutions.`,
+      cert3: `I'm thrilled to have completed the exam and received a certificate for finishing the VOCABULARY 1 course at Peace English Academy with a "B" grade (Very Good) on January 25th, 2022!\n\nThis experience motivates me even more to continue improving my English skills. Thank you to Peace English Academy for providing such an amazing learning experience!`,
+      cert4: `I successfully completed the AETS English proficiency test and received an overall score of 457. This score report reflects my performance in several language areas, including Listening, Structure, and Reading.\n\nThis achievement shows my commitment to improving my English proficiency and motivates me to continue developing my communication skills for academic and professional purposes.`,
+      cert5: `I am proud to have completed the Speaking Two Intermediate program at Mahir Bahasa Kampung Inggris Pare. This certificate reflects my progress in speaking, pronunciation, vocabulary, and grammar through an intensive offline learning program.\n\nThis experience helped me become more confident in spoken English and encouraged me to keep improving my communication skills in both academic and real-life situations.`,
+      cert6: `I successfully completed the Impromptu Program at Mr. Pepsi Upgrade Kampung Inggris Pare with an excellent result. This certificate represents my ability to think quickly, organize ideas, and express them confidently in spoken English.\n\nThrough this program, I improved my spontaneity, fluency, and confidence in public speaking, which are essential skills for academic presentations, professional communication, and everyday conversations.`,
+      cert7: `This grading document from The Daffodils English Course provides a clear overview of achievement levels and class progression in English learning. It explains the equivalence of grades and describes the learning focus for each level of study.\n\nThis reference helped me better understand my English learning pathway and encouraged me to continue improving my speaking, listening, pronunciation, and communication skills step by step.`,
+      cert8: `I am pleased to have completed the Speak First program at The Daffodils English Course and achieved a good result. This certificate reflects my early progress in building English speaking confidence and improving my basic communication ability.\n\nThis learning experience became an important foundation for my English development and motivated me to continue practicing, learning, and growing in both speaking and overall language proficiency.`,
+    },
+    // Landing page certificate card descriptions
+    cert_cards: {
+      cert1_desc: 'Won 3rd place in the "Code Championship" during Musywil ke-V Permikomnas IX East Java.',
+      cert2_desc: 'Received Internship Certificate for Web Revamp project from TBN Indonesia.',
+      cert6_desc: 'Certified for spontaneous and confident communication in the Impromptu program.',
+    },
+    // SertifikatAll page descriptions
+    cert_all_cards: {
+      cert1_desc: 'Won 3rd place in the "Code Championship" during Musywil ke-V Permikomnas IX East Java.',
+      cert2_desc: 'Received Internship Certificate for Web Revamp project from TBN Indonesia.',
+      cert3_desc: 'Completed Vocabulary 1 course with "B" grade at Peace English Academy.',
+      cert4_desc: 'English proficiency test result covering Listening, Structure, and Reading.',
+      cert5_desc: 'Achieved Speaking Two Intermediate program completion certificate.',
+      cert6_desc: 'Certified for spontaneous and confident communication in the Impromptu program.',
+      cert7_desc: 'Level progression and learning path in English speaking development.',
+      cert8_desc: 'Built a strong foundation in English speaking through the Speak First program.',
+    },
   },
   id: {
     nav: {
@@ -72,6 +115,7 @@ export const translations = {
       city: "Gresik.",
       cta_portfolio: "Lihat Portofolio Saya",
       cta_hire: "Rekrut Saya",
+      desc: "Software engineer yang berdedikasi fokus pada pembuatan solusi digital yang berdampak dan aplikasi web yang kuat.",
     },
     about: {
       title: "Tentang Saya",
@@ -84,7 +128,7 @@ export const translations = {
     },
     skills: {
       title: "Kemampuan",
-      all_btn: "Lihat Semua Kemampuan",
+      subtitle: "Seperangkat keterampilan teknis dan kreatif yang diperoleh melalui pengalaman akademis dan praktis.",
     },
     projects: {
       title: "Portofolio Saya",
@@ -92,11 +136,18 @@ export const translations = {
       back_btn: "Kembali",
       view_img: "Lihat Gambar",
       click_close: "Klik dimanapun untuk keluar",
+      subtitle: "Menampilkan beberapa karya terbaik saya di berbagai pengembangan web dan desain.",
+      subtitle_all: "Jelajahi perjalanan komprehensif saya melalui software engineering, mulai dari sistem web yang kompleks hingga pengalaman AR/VR interaktif.",
+      view_project: "Lihat Proyek",
     },
     certificates: {
       title: "Sertifikat Saya",
       all_btn: "Lihat Semua Sertifikat",
       more: "Selengkapnya",
+      subtitle: "Sertifikasi akademik dan profesional yang memvalidasi keterampilan dan pencapaian saya.",
+      subtitle_all: "Sertifikasi akademik dan profesional yang memvalidasi keahlian dan komitmen saya untuk terus belajar.",
+      cert_label: "Sertifikat",
+      cert_desc_label: "Deskripsi Sertifikat",
     },
     contact: {
       title: "Kontak Kami",
@@ -104,11 +155,44 @@ export const translations = {
       email: "Email Anda",
       message: "Pesan Anda",
       send: "Kirim Pesan",
+      subtitle: "Jangan ragu untuk menghubungi saya untuk kolaborasi atau sekadar menyapa! Saya selalu terbuka untuk mendiskusikan proyek baru.",
+      quick_msg: "Pesan Cepat",
+      quick_msg_desc: "Kirim pesan langsung ke WhatsApp saya",
     },
     footer: {
       description: "Membangun pengalaman digital modern dan fungsional.",
       rights: "Semua hak dilindungi.",
       developed_by: "Dikembangkan oleh Herlando Prayitno",
-    }
+    },
+    notfound: {
+      title: "Halaman Tidak Ditemukan",
+      back_btn: "Kembali ke Beranda",
+    },
+    cert_details: {
+      back_btn: "Kembali",
+      cert1: `Bangga bisa meraih Juara 3 dalam "Lomba Code Championship" pada Musyawarah Wilayah ke-V Permikomnas wilayah IX Jawa Timur tanggal 22 Desember 2023!\n\nPencapaian ini merupakan bukti kerja keras dan tekad yang saya curahkan dalam bidang coding, dan saya sangat bersyukur atas kesempatan untuk berkompetisi bersama para talenta terbaik di bidang informatika. Terima kasih kepada penyelenggara dan seluruh peserta yang membuat acara ini berkesan. Siap untuk tantangan dan peluang lebih banyak lagi di komunitas teknologi!`,
+      cert2: `Saya menerima Sertifikat Magang dari Yayasan Transformasi Bhakti Negeri (TBN Indonesia) untuk berpartisipasi dalam proyek Revamp Website.\n\nPengalaman magang ini memberikan saya keterampilan praktis dalam pengembangan web dunia nyata dan memperkuat kemampuan saya untuk berkolaborasi dengan tim dalam menghadirkan solusi digital yang bermakna.`,
+      cert3: `Saya sangat senang telah menyelesaikan ujian dan menerima sertifikat untuk menyelesaikan kursus VOCABULARY 1 di Peace English Academy dengan nilai "B" (Sangat Baik) pada tanggal 25 Januari 2022!\n\nPengalaman ini semakin memotivasi saya untuk terus meningkatkan kemampuan bahasa Inggris saya. Terima kasih kepada Peace English Academy atas pengalaman belajar yang luar biasa!`,
+      cert4: `Saya berhasil menyelesaikan tes kemahiran bahasa Inggris AETS dan menerima skor keseluruhan 457. Laporan skor ini mencerminkan performa saya di beberapa area bahasa, termasuk Listening, Structure, dan Reading.\n\nPencapaian ini menunjukkan komitmen saya untuk meningkatkan kemahiran bahasa Inggris dan memotivasi saya untuk terus mengembangkan keterampilan komunikasi untuk keperluan akademis dan profesional.`,
+      cert5: `Saya bangga telah menyelesaikan program Speaking Two Intermediate di Mahir Bahasa Kampung Inggris Pare. Sertifikat ini mencerminkan kemajuan saya dalam berbicara, pengucapan, kosakata, dan tata bahasa melalui program pembelajaran intensif secara langsung.\n\nPengalaman ini membantu saya menjadi lebih percaya diri dalam berbicara bahasa Inggris dan mendorong saya untuk terus meningkatkan kemampuan komunikasi di situasi akademis maupun kehidupan nyata.`,
+      cert6: `Saya berhasil menyelesaikan Program Impromptu di Mr. Pepsi Upgrade Kampung Inggris Pare dengan hasil yang sangat baik. Sertifikat ini merepresentasikan kemampuan saya untuk berpikir cepat, mengorganisasi ide, dan mengekspresikannya dengan percaya diri dalam bahasa Inggris lisan.\n\nMelalui program ini, saya meningkatkan spontanitas, kelancaran, dan kepercayaan diri dalam public speaking, yang merupakan keterampilan penting untuk presentasi akademis, komunikasi profesional, dan percakapan sehari-hari.`,
+      cert7: `Dokumen penilaian dari The Daffodils English Course ini memberikan gambaran jelas tentang tingkat pencapaian dan progres kelas dalam pembelajaran bahasa Inggris. Dokumen ini menjelaskan kesetaraan nilai dan menggambarkan fokus pembelajaran untuk setiap tingkat studi.\n\nReferensi ini membantu saya lebih memahami jalur pembelajaran bahasa Inggris saya dan mendorong saya untuk terus meningkatkan keterampilan berbicara, mendengarkan, pengucapan, dan komunikasi secara bertahap.`,
+      cert8: `Saya senang telah menyelesaikan program Speak First di The Daffodils English Course dan meraih hasil yang baik. Sertifikat ini mencerminkan kemajuan awal saya dalam membangun kepercayaan diri berbicara bahasa Inggris dan meningkatkan kemampuan komunikasi dasar.\n\nPengalaman belajar ini menjadi fondasi penting untuk pengembangan bahasa Inggris saya dan memotivasi saya untuk terus berlatih, belajar, dan berkembang dalam berbicara maupun kemahiran bahasa secara keseluruhan.`,
+    },
+    cert_cards: {
+      cert1_desc: 'Meraih Juara 3 dalam "Lomba Code Championship" selama Musywil ke-V Permikomnas wilayah IX Jawa Timur.',
+      cert2_desc: 'Menerima Sertifikat Magang untuk proyek Revamp Website dari TBN Indonesia.',
+      cert6_desc: 'Bersertifikat untuk komunikasi spontan dan percaya diri dalam program Impromptu.',
+    },
+    cert_all_cards: {
+      cert1_desc: 'Meraih Juara 3 dalam "Lomba Code Championship" selama Musywil ke-V Permikomnas wilayah IX Jawa Timur.',
+      cert2_desc: 'Menerima Sertifikat Magang untuk proyek Revamp Website dari TBN Indonesia.',
+      cert3_desc: 'Menyelesaikan kursus VOCABULARY 1 dengan nilai "B" di Peace English Academy.',
+      cert4_desc: 'Hasil tes kemahiran bahasa Inggris meliputi Listening, Structure, dan Reading.',
+      cert5_desc: 'Meraih sertifikat penyelesaian program Speaking Two Intermediate.',
+      cert6_desc: 'Bersertifikat untuk komunikasi spontan dan percaya diri dalam program Impromptu.',
+      cert7_desc: 'Progres level dan jalur pembelajaran dalam pengembangan berbicara bahasa Inggris.',
+      cert8_desc: 'Membangun fondasi yang kuat dalam berbicara bahasa Inggris melalui program Speak First.',
+    },
   }
 };

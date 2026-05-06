@@ -17,7 +17,7 @@ const ProjectTemplate = ({ title, tags, items }) => {
       <Header />
       
       <main className="flex-grow pt-32 pb-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
           {/* Back Button */}
           <button 
             onClick={() => navigate('/proyek')} 
@@ -47,11 +47,11 @@ const ProjectTemplate = ({ title, tags, items }) => {
             {items.map((item, index) => (
               <div 
                 key={index}
-                className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 cursor-pointer border border-gray-100 flex flex-col"
+                className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 cursor-pointer border border-gray-100 flex flex-col"
                 onClick={() => setModalImage(item.image)}
               >
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-text-dark mb-4 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold text-text-dark mb-4 group-hover:text-primary transition-colors lowercase capitalize line-clamp-2 min-h-[3.5rem]">
                     {item.title}
                   </h3>
                 </div>
@@ -92,11 +92,14 @@ const ProjectTemplate = ({ title, tags, items }) => {
             <FaTimes size={24} />
           </button>
 
-          <div className="relative z-10 w-full max-w-6xl max-h-[85vh] flex items-center justify-center animate-zoom-in">
+          <div 
+            className="relative z-10 w-full max-w-6xl max-h-[85vh] overflow-y-auto overflow-x-hidden flex justify-center items-start animate-zoom-in rounded-2xl bg-white/5 p-2"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img 
               src={modalImage} 
               alt="Preview" 
-              className="max-w-full max-h-full object-contain rounded-2xl shadow-2xl" 
+              className="w-full h-auto object-cover rounded-xl shadow-md" 
             />
           </div>
           
