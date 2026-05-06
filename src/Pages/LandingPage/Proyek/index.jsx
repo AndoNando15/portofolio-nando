@@ -1,35 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
-import halamanJadwal from '/images/Proyek/algoritma-genetika/HALAMAN-LOGIN.png';
 import { useLanguage } from '../../../context/LanguageContext';
 import { translations } from '../../../data/translations';
+import { projectsData } from '../../../data/projectsData';
 
 const Proyek = () => {
   const navigate = useNavigate();
   const { language } = useLanguage();
   const t = translations[language].projects;
 
-  const projectList = [
-    {
-      id: 'subproyek1',
-      title: 'Algoritma Genetika - Penjadwalan Website',
-      image: halamanJadwal,
-      tags: ['UI/UX Design', 'PHP', 'Laravel', 'GA']
-    },
-    {
-      id: 'subproyek8',
-      title: 'PUZZLE - Game Edukasi Mencocokan Posisi Gambar',
-      image: '/images/Proyek/game-edukasi/001-halaman-loading.png',
-      tags: ['Unity', 'C#', '2D', 'UI/UX']
-    },
-    {
-      id: 'subproyek10',
-      title: 'APP Mamin',
-      image: '/images/Proyek/app-mamin/halaman-login.png',
-      tags: ['Web App', 'Dashboard', 'Makan & Minum']
-    }
-  ];
+  // Show only first 3 projects on Landing Page
+  const projectList = projectsData.slice(0, 3);
 
   return (
     <section id="proyek" className="py-20">
@@ -55,43 +37,44 @@ const Proyek = () => {
           </button>
         </div>
 
-        {/* Cards Grid */}
+        {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectList.map((project) => (
             <div 
               key={project.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 border border-gray-100 flex flex-col"
+              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col cursor-pointer"
+              onClick={() => navigate(`/proyek/${project.id}`)}
             >
-              {/* Image Container */}
               <div className="relative overflow-hidden aspect-video">
                 <img 
-                  src={project.image} 
+                  src={project.image || (project.items && project.items[0] && project.items[0].image)} 
                   alt={project.title} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                 />
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <FaArrowRight />
+                  </div>
+                </div>
               </div>
 
-              {/* Content */}
-              <div className="p-6 flex-grow flex flex-col">
+              <div className="p-8 flex-grow flex flex-col">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map(tag => (
+                  {project.tags.slice(0, 3).map(tag => (
                     <span key={tag} className="text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full">
                       {tag}
                     </span>
                   ))}
                 </div>
                 
-                <h3 className="text-xl font-bold text-text-dark mb-6 line-clamp-2">
+                <h3 className="text-xl font-bold text-text-dark mb-4 group-hover:text-primary transition-colors line-clamp-2">
                   {project.title}
                 </h3>
 
-                <button 
-                  onClick={() => navigate(`/${project.id}`)}
-                  className="mt-auto w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-gray-100 text-text-dark rounded-full group-hover:bg-primary group-hover:text-white transition-all duration-300 self-end"
-                >
-                  <FaArrowRight className="-rotate-45 group-hover:rotate-0 transition-transform" />
-                </button>
+                <div className="mt-auto pt-4 flex items-center gap-2 text-primary font-bold text-sm">
+                  {t.view_project}
+                  <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
             </div>
           ))}

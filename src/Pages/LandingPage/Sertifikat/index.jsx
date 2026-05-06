@@ -1,11 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
-import sertifikatMagang from '/Sertifikat/sertifikat-magang.png';
-import sertifikatMrPepsi from '/Sertifikat/sertifikat-mr-pepsi-impromptu.png';
-import sertifikatLomba from '/Sertifikat/sertifikat-lomba_code_championship_juara_3.png';
 import { useLanguage } from '../../../context/LanguageContext';
 import { translations } from '../../../data/translations';
+import { certificatesData } from '../../../data/certificatesData';
 
 const Sertifikat = () => {
   const navigate = useNavigate();
@@ -13,29 +11,8 @@ const Sertifikat = () => {
   const t = translations[language].certificates;
   const cc = translations[language].cert_cards;
 
-  const certList = [
-    {
-      id: 'subsertifikat1',
-      title: 'CODE CHAMPIONSHIP : Musywil Jawa Timur 2023',
-      image: sertifikatLomba,
-      tags: ['Juara 3', 'Dec 2023'],
-      desc: cc.cert1_desc
-    },
-    {
-      id: 'subsertifikat2',
-      title: 'Yayasan Transformasi Bhakti Negeri (TBN INDONESIA)',
-      image: sertifikatMagang,
-      tags: ['Internship', '2024'],
-      desc: cc.cert2_desc
-    },
-    {
-      id: 'subsertifikat6',
-      title: 'Mr. Pepsi Upgrade - Impromptu Program',
-      image: sertifikatMrPepsi,
-      tags: ['Intermediate', '2025'],
-      desc: cc.cert6_desc
-    }
-  ];
+  // Show only first 3 certificates on Landing Page
+  const certList = certificatesData.slice(0, 3);
 
   return (
     <section id="sertifikat" className="py-20 bg-primary/5">
@@ -61,12 +38,13 @@ const Sertifikat = () => {
           </button>
         </div>
 
-        {/* Cards Grid */}
+        {/* Certificate Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certList.map((cert) => (
             <div 
               key={cert.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-500 border border-gray-100 flex flex-col"
+              className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col cursor-pointer"
+              onClick={() => navigate(`/sertifikat/${cert.id}`)}
             >
               <div className="relative overflow-hidden aspect-[4/3]">
                 <img 
@@ -91,16 +69,15 @@ const Sertifikat = () => {
                 </h3>
 
                 <p className="text-sm text-gray-500 mb-6 line-clamp-3">
-                  {cert.desc}
+                  {cc[`${cert.descKey}_desc`]}
                 </p>
 
-                <button 
-                  onClick={() => navigate(`/${cert.id}`)}
-                  className="mt-auto text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all cursor-pointer"
+                <div 
+                  className="mt-auto text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all"
                 >
                   {t.more}
                   <FaArrowRight className="text-xs" />
-                </button>
+                </div>
               </div>
             </div>
           ))}

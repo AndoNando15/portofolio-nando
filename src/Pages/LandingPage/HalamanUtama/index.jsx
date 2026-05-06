@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaPlay, FaWhatsapp } from 'react-icons/fa';
-import bannerImage1 from '/images/Konten/3-foto-banner.png';
+import bannerImage1 from '/images/Konten/3-foto-banner.webp';
 import { useLanguage } from '../../../context/LanguageContext';
 import { translations } from '../../../data/translations';
 
