@@ -43,7 +43,7 @@ const TentangSaya = () => {
             <div className="flex justify-center lg:justify-start pt-4">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="px-5 py-2.5 rounded-xl md:px-8 md:py-4 md:rounded-2xl bg-white text-primary font-bold text-sm md:text-lg shadow-sm hover:bg-primary-light hover:text-white hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                className="px-4 py-1.5 rounded-full md:px-8 md:py-4 md:rounded-2xl bg-white text-primary font-bold text-[12px] md:text-lg shadow-sm hover:bg-primary-light hover:text-white hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 {t.cv_btn}
               </button>
@@ -80,14 +80,14 @@ const TentangSaya = () => {
                 <a
                   href={downloadCV}
                   download="CV_Herlando_Prayitno.pdf"
-                  className="px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition shadow-md text-center"
+                  className="px-4 py-2 text-xs md:px-6 md:py-3 md:text-base bg-primary text-white font-bold rounded-xl hover:bg-primary-dark transition shadow-md text-center"
                 >
                   {t.cv_download}
                 </a>
 
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="px-6 py-3 border border-gray-300 text-gray-700 font-bold rounded-xl hover:bg-white transition cursor-pointer"
+                  className="px-4 py-2 text-xs md:px-6 md:py-3 md:text-base border border-gray-300 text-gray-700 font-bold rounded-xl hover:bg-white transition cursor-pointer"
                 >
                   {t.cv_close}
                 </button>

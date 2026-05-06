@@ -17,9 +17,8 @@ const Sertifikat = () => {
   return (
     <section id="sertifikat" className="py-20 bg-primary/5">
       <div className="container mx-auto px-4 lg:px-12 xl:px-24 max-w-7xl">
-        {/* Title */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div className="space-y-2 text-center md:text-left">
+        <div className="mb-12 text-center md:text-left">
+          <div className="space-y-2">
             <h2 className="text-3xl md:text-4xl font-bold text-text-dark flex items-center justify-center md:justify-start gap-3">
               <span className="w-10 h-1 bg-primary rounded-full"></span>
               {t.title}
@@ -28,14 +27,6 @@ const Sertifikat = () => {
               {t.subtitle}
             </p>
           </div>
-
-          <button 
-            onClick={() => navigate('/sertifikat')} 
-            className="btn-outline flex items-center gap-2 group cursor-pointer"
-          >
-            {t.all_btn}
-            <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </button>
         </div>
 
         {/* Certificate Grid */}
@@ -81,6 +72,17 @@ const Sertifikat = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="mt-12 flex justify-center">
+          <button 
+            onClick={() => navigate('/sertifikat')} 
+            className="btn-outline flex items-center justify-center gap-2 group cursor-pointer w-full md:w-auto"
+          >
+            {t.all_btn}
+            <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+          </button>
         </div>
       </div>
     </section>

@@ -32,7 +32,7 @@ const KontakKami = () => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Contact Items */}
               <div className="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/10">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
@@ -95,7 +95,7 @@ const KontakKami = () => {
                 />
                 <button
                   onClick={handleSend}
-                  className="w-full btn-primary py-2.5 md:py-3 text-sm md:text-base font-bold flex items-center justify-center gap-2 group cursor-pointer"
+                  className="w-full btn-primary py-1.5 md:py-3 text-[12px] md:text-base font-bold flex items-center justify-center gap-2 group cursor-pointer"
                 >
                   <FaWhatsapp className="text-lg group-hover:scale-110 transition-transform" />
                   {t.send}

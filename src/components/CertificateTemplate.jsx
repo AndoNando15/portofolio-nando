@@ -20,7 +20,7 @@ const CertificateTemplate = ({ title, tags, image, description }) => {
           {/* Back Button */}
           <button 
             onClick={() => navigate('/sertifikat')} 
-            className="group flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all cursor-pointer"
+            className="group flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all cursor-pointer text-xs md:text-base"
           >
             <FaChevronLeft className="text-sm" />
             {translations[language].projects.back_btn}

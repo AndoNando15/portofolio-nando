@@ -69,18 +69,18 @@ const Header = () => {
             {/* Language Switcher */}
             <button
               onClick={toggleLanguage}
-              className={`flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer border ${
+              className={`flex items-center gap-1 sm:gap-2 px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg sm:rounded-xl text-[10px] sm:text-sm font-bold transition-all cursor-pointer border ${
                 scrolled ? 'border-primary/20 text-primary hover:bg-primary/10' : 'border-white/30 text-white hover:bg-white/20'
               }`}
             >
-              <FaGlobe className="text-[10px] sm:text-xs" />
+              <FaGlobe className="text-[9px] sm:text-xs" />
               {language.toUpperCase()}
             </button>
 
             {/* Contact Button (Desktop) */}
             <button
               onClick={() => handleNavClick('/#kontak-kami')}
-              className={`hidden md:block px-4 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`hidden md:block px-3 sm:px-5 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-[10px] sm:text-sm font-bold transition-all cursor-pointer ${
                 scrolled ? 'bg-primary text-white hover:bg-primary-dark shadow-md' : 'bg-white text-primary hover:bg-primary-light hover:text-white'
               }`}
             >

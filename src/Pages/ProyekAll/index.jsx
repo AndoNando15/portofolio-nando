@@ -21,7 +21,7 @@ const ProyekAll = () => {
           {/* Back Button */}
           <button 
             onClick={() => navigate('/')} 
-            className="group flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all cursor-pointer"
+            className="group flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all cursor-pointer text-xs md:text-base"
           >
             <FaChevronLeft className="text-sm" />
             {t.back_btn}
