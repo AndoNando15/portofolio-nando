@@ -64,7 +64,7 @@ const KontakKami = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/10">
+              {/* <div className="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/10">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                   <FaWhatsapp size={16} />
                 </div>
@@ -72,7 +72,7 @@ const KontakKami = () => {
                   <p className="font-bold text-sm text-text-dark">Direct Chat</p>
                   <p className="text-xs text-gray-500">WhatsApp</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -87,7 +87,7 @@ const KontakKami = () => {
               </div>
 
               <div className="space-y-3">
-                <textarea 
+                <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder={t.message}

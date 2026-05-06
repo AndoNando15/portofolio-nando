@@ -11,7 +11,7 @@ export const translations = {
     hero: {
       greeting: "Hello Everyone",
       intro: "I am",
-      role: "Software Engineering",
+      role: "Software Engineer",
       from: "From",
       city: "Gresik.",
       cta_portfolio: "See My Portfolio",
