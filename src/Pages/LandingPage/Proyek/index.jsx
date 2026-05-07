@@ -11,7 +11,7 @@ const Proyek = () => {
   const t = translations[language].projects;
 
   // Show specific projects on Landing Page
-  const featuredIds = ['algoritma-genetika', 'puzzle-game-edukasi', 'ar-game-haji'];
+  const featuredIds = ['algoritma-genetika', 'puzzle-game-edukasi', 'aplikasi-ukk-tptu'];
   const projectList = projectsData.filter(p => featuredIds.includes(p.id))
     .sort((a, b) => featuredIds.indexOf(a.id) - featuredIds.indexOf(b.id));
 
