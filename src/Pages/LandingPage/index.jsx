@@ -5,6 +5,7 @@ import Kemampuan from './Kemampuan';
 import KontakKami from './KontakKami';
 import Proyek from './Proyek';
 import Sertifikat from './Sertifikat';
+import Publikasi from './Publikasi';
 import TentangSaya from './TentangSaya';
 
 const LandingPage = () => {
@@ -17,6 +18,7 @@ const LandingPage = () => {
         <TentangSaya />
         <Proyek />
         <Sertifikat />
+        <Publikasi />
         <KontakKami />
       </main>
       <Footer />

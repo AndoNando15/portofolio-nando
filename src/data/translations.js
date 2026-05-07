@@ -97,6 +97,14 @@ export const translations = {
       cert7_desc: 'Level progression and learning path in English speaking development.',
       cert8_desc: 'Built a strong foundation in English speaking through the Speak First program.',
     },
+    publications: {
+      title: "Publications",
+      subtitle: "Academic articles, research papers, and media contributions.",
+      view_pdf: "View PDF",
+      view_link: "View Article",
+      view_video: "Watch Video",
+      read_more: "Read More",
+    },
   },
   id: {
     nav: {
@@ -193,6 +201,14 @@ export const translations = {
       cert6_desc: 'Bersertifikat untuk komunikasi spontan dan percaya diri dalam program Impromptu.',
       cert7_desc: 'Progres level dan jalur pembelajaran dalam pengembangan berbicara bahasa Inggris.',
       cert8_desc: 'Membangun fondasi yang kuat dalam berbicara bahasa Inggris melalui program Speak First.',
+    },
+    publications: {
+      title: "Publikasi",
+      subtitle: "Artikel akademik, karya ilmiah, dan kontribusi media.",
+      view_pdf: "Lihat PDF",
+      view_link: "Lihat Artikel",
+      view_video: "Tonton Video",
+      read_more: "Baca Selengkapnya",
     },
   }
 };
